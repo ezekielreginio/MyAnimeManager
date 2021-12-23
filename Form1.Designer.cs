@@ -41,7 +41,13 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listViewFiles = new System.Windows.Forms.ListView();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.panelAnimeDirectory = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.panelHome.SuspendLayout();
+            this.panelAnimeDirectory.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -129,25 +135,66 @@
             // listViewFiles
             // 
             this.listViewFiles.LargeImageList = this.imageList1;
-            this.listViewFiles.Location = new System.Drawing.Point(12, 27);
+            this.listViewFiles.Location = new System.Drawing.Point(0, 28);
             this.listViewFiles.Name = "listViewFiles";
-            this.listViewFiles.Size = new System.Drawing.Size(802, 411);
+            this.listViewFiles.Size = new System.Drawing.Size(802, 363);
             this.listViewFiles.TabIndex = 1;
             this.listViewFiles.UseCompatibleStateImageBehavior = false;
+            // 
+            // panelHome
+            // 
+            this.panelHome.Controls.Add(this.label1);
+            this.panelHome.Location = new System.Drawing.Point(12, 27);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(802, 391);
+            this.panelHome.TabIndex = 2;
+            // 
+            // panelAnimeDirectory
+            // 
+            this.panelAnimeDirectory.Controls.Add(this.listViewFiles);
+            this.panelAnimeDirectory.Controls.Add(this.label2);
+            this.panelAnimeDirectory.Location = new System.Drawing.Point(12, 27);
+            this.panelAnimeDirectory.Name = "panelAnimeDirectory";
+            this.panelAnimeDirectory.Size = new System.Drawing.Size(802, 391);
+            this.panelAnimeDirectory.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "My Anime Directory";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Home Page";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 450);
-            this.Controls.Add(this.listViewFiles);
+            this.Controls.Add(this.panelAnimeDirectory);
+            this.Controls.Add(this.panelHome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyAnimeManager v1.0";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panelHome.ResumeLayout(false);
+            this.panelHome.PerformLayout();
+            this.panelAnimeDirectory.ResumeLayout(false);
+            this.panelAnimeDirectory.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +202,7 @@
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You have clicked Home Button");
+            this.panelHome.BringToFront();
         }
 
         #endregion
@@ -172,5 +219,9 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ImageList imageList1;
         private ListView listViewFiles;
+        private Panel panelHome;
+        private Label label1;
+        private Panel panelAnimeDirectory;
+        private Label label2;
     }
 }

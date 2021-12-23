@@ -7,6 +7,7 @@ namespace MyAnimeManager
     public partial class Form1 : Form
     {
         List<string> listFiles = new List<string>();
+        List<Panel> listPanel = new List<Panel>();
         public Form1()
         {
             InitializeComponent();
@@ -61,9 +62,9 @@ namespace MyAnimeManager
                         DirectoryInfo directoryInfo = new DirectoryInfo(item);
                         Bitmap bp = new Bitmap(getIconPath(directoryInfo.FullName));
                         imageList1.Images.Add(bp);
-                        MessageBox.Show("Icon Path: " + bp.GetType());
                         listViewFiles.Items.Add(directoryInfo.Name, imageList1.Images.Count - 1);
                     }
+                    panelAnimeDirectory.BringToFront();
                 }
             }
             //using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog() { Description = "Select your Anime Directory." })
@@ -79,6 +80,12 @@ namespace MyAnimeManager
             //    }
             //}
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listPanel.Add(panelAnimeDirectory);
+            listPanel.Add(panelHome);
         }
     }
 }
