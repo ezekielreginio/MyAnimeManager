@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Zeke\\source\\repos\\MyAnimeManager\\MyAnimeManager\\MyAnimeManager.csproj": {}
+    "C:\\Users\\Zeke\\VSCodeProjects\\MyAnimeManager\\MyAnimeManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Zeke\\source\\repos\\MyAnimeManager\\MyAnimeManager\\MyAnimeManager.csproj": {
+    "C:\\Users\\Zeke\\VSCodeProjects\\MyAnimeManager\\MyAnimeManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Zeke\\source\\repos\\MyAnimeManager\\MyAnimeManager\\MyAnimeManager.csproj",
+        "projectUniqueName": "C:\\Users\\Zeke\\VSCodeProjects\\MyAnimeManager\\MyAnimeManager.csproj",
         "projectName": "MyAnimeManager",
-        "projectPath": "C:\\Users\\Zeke\\source\\repos\\MyAnimeManager\\MyAnimeManager\\MyAnimeManager.csproj",
+        "projectPath": "C:\\Users\\Zeke\\VSCodeProjects\\MyAnimeManager\\MyAnimeManager.csproj",
         "packagesPath": "C:\\Users\\Zeke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Zeke\\source\\repos\\MyAnimeManager\\MyAnimeManager\\obj\\",
+        "outputPath": "C:\\Users\\Zeke\\VSCodeProjects\\MyAnimeManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Zeke\\AppData\\Roaming\\NuGet\\NuGet.Config",
