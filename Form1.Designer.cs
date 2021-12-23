@@ -42,12 +42,15 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.listViewFiles = new System.Windows.Forms.ListView();
             this.panelHome = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelAnimeDirectory = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelAnimeFolder = new System.Windows.Forms.Panel();
+            this.labelAnimeFolderTitle = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelAnimeDirectory.SuspendLayout();
+            this.panelAnimeFolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,6 +143,7 @@
             this.listViewFiles.Size = new System.Drawing.Size(802, 363);
             this.listViewFiles.TabIndex = 1;
             this.listViewFiles.UseCompatibleStateImageBehavior = false;
+            this.listViewFiles.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewFiles_MouseDoubleClick);
             // 
             // panelHome
             // 
@@ -148,6 +152,15 @@
             this.panelHome.Name = "panelHome";
             this.panelHome.Size = new System.Drawing.Size(802, 391);
             this.panelHome.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Home Page";
             // 
             // panelAnimeDirectory
             // 
@@ -167,14 +180,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "My Anime Directory";
             // 
-            // label1
+            // panelAnimeFolder
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Home Page";
+            this.panelAnimeFolder.Controls.Add(this.labelAnimeFolderTitle);
+            this.panelAnimeFolder.Location = new System.Drawing.Point(12, 27);
+            this.panelAnimeFolder.Name = "panelAnimeFolder";
+            this.panelAnimeFolder.Size = new System.Drawing.Size(802, 391);
+            this.panelAnimeFolder.TabIndex = 4;
+            // 
+            // labelAnimeFolderTitle
+            // 
+            this.labelAnimeFolderTitle.AutoSize = true;
+            this.labelAnimeFolderTitle.Location = new System.Drawing.Point(3, 0);
+            this.labelAnimeFolderTitle.Name = "labelAnimeFolderTitle";
+            this.labelAnimeFolderTitle.Size = new System.Drawing.Size(75, 15);
+            this.labelAnimeFolderTitle.TabIndex = 0;
+            this.labelAnimeFolderTitle.Text = "(Anime Title)";
             // 
             // Form1
             // 
@@ -182,6 +203,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 450);
             this.Controls.Add(this.panelAnimeDirectory);
+            this.Controls.Add(this.panelAnimeFolder);
             this.Controls.Add(this.panelHome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -195,6 +217,8 @@
             this.panelHome.PerformLayout();
             this.panelAnimeDirectory.ResumeLayout(false);
             this.panelAnimeDirectory.PerformLayout();
+            this.panelAnimeFolder.ResumeLayout(false);
+            this.panelAnimeFolder.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +247,7 @@
         private Label label1;
         private Panel panelAnimeDirectory;
         private Label label2;
+        private Panel panelAnimeFolder;
+        private Label labelAnimeFolderTitle;
     }
 }

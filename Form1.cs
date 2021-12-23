@@ -1,3 +1,4 @@
+using MyAnimeManager.Models;
 using System.Diagnostics;
 using System.Net.Mail;
 using System.Runtime.InteropServices;
@@ -58,11 +59,18 @@ namespace MyAnimeManager
                         //listFiles.Add(fileInfo.FullName);
                         //listViewFiles.Items.Add(fileInfo.Name,imageList1.Images.Count - 1);
                         //MessageBox.Show("Icon Path: " + getIconPath(directoryInfo.FullName));
-
                         DirectoryInfo directoryInfo = new DirectoryInfo(item);
+                        ListViewItem viewItem = new ListViewItem();
+
                         Bitmap bp = new Bitmap(getIconPath(directoryInfo.FullName));
                         imageList1.Images.Add(bp);
-                        listViewFiles.Items.Add(directoryInfo.Name, imageList1.Images.Count - 1);
+
+                        AnimeDirectory animeDirectory = new AnimeDirectory(directoryInfo.FullName, directoryInfo.Name);
+
+                        viewItem.Text = directoryInfo.Name;
+                        viewItem.ImageIndex = imageList1.Images.Count - 1;
+                        viewItem.Tag = animeDirectory;
+                        listViewFiles.Items.Add(viewItem);
                     }
                     panelAnimeDirectory.BringToFront();
                 }
@@ -86,6 +94,18 @@ namespace MyAnimeManager
         {
             listPanel.Add(panelAnimeDirectory);
             listPanel.Add(panelHome);
+        }
+
+        private void listViewFiles_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ListViewHitTestInfo info = listViewFiles.HitTest(e.X, e.Y);
+            ListViewItem item = info.Item;
+            AnimeDirectory animeDirectory = (AnimeDirectory)info.Item.Tag;
+            if (item != null)
+            {
+                labelAnimeFolderTitle.Text = animeDirectory.Name;
+                panelAnimeFolder.BringToFront();
+            }
         }
     }
 }
