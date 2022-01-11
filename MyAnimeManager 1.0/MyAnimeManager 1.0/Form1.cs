@@ -1,8 +1,4 @@
-﻿using Bunifu.Framework.UI;
-using Bunifu.UI.WinForms.BunifuButton;
-using FontAwesome.Sharp;
-using MyAnimeManager_1._0.Classes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,16 +12,10 @@ namespace MyAnimeManager_1._0
 {
     public partial class Form1 : Form
     {
-        //Fields
-        private IconPictureBox currentButton;
-        private Form activeDesktopForm;
-        private Random random;
-        private int tempIndex;
-
-        //Constructor
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
             random = new Random();
             //Open Directory Form
             OpenChildForm(new Forms.Directory(), null);
@@ -102,6 +92,8 @@ namespace MyAnimeManager_1._0
         private void iconPictureBox3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+=======
+>>>>>>> parent of 46f95da (Desktop UI Finished)
         }
     }
 }
