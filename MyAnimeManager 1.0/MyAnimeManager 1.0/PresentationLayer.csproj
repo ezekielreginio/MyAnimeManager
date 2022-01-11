@@ -72,25 +72,43 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ThemeColor.cs" />
+    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="Presenters\IBasePresenter.cs" />
+    <Compile Include="Presenters\Main\Forms\DirectoryPresenter.cs" />
+    <Compile Include="Presenters\Main\Forms\IDirectoryPresenter.cs" />
+    <Compile Include="Presenters\Main\IMainPresenter.cs" />
+    <Compile Include="Presenters\Main\MainPresenter.cs" />
+    <Compile Include="Views\ErrorMessage\ErrorMessageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ErrorMessage\ErrorMessageView.Designer.cs">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorMessage\IErrorMessageView.cs" />
+    <Compile Include="Views\Main\Forms\IDirectoryView.cs" />
+    <Compile Include="Views\Main\IMainView.cs" />
     <Compile Include="Views\Main\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Main\Forms\Directory.cs">
+    <Compile Include="Views\Main\Forms\DirectoryView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main\Forms\Directory.Designer.cs">
-      <DependentUpon>Directory.cs</DependentUpon>
+    <Compile Include="Views\Main\Forms\DirectoryView.Designer.cs">
+      <DependentUpon>DirectoryView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\ErrorMessage\ErrorMessageView.resx">
+      <DependentUpon>ErrorMessageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main\Forms\Directory.resx">
-      <DependentUpon>Directory.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Main\Forms\DirectoryView.resx">
+      <DependentUpon>DirectoryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +138,13 @@
     <None Include="Resources\MAM1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Presenters\" />
+    <Folder Include="Presenters\UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonComponents\CommonComponents.csproj">
+      <Project>{b7ead35e-a9a6-4753-be6b-9bd022fcc836}</Project>
+      <Name>CommonComponents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,11 +8,20 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu_UI_v1.5.3.xml
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
-C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Form1.resources
-C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Forms.Directory.resources
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Properties.Resources.resources
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.CopyComplete
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager 1.0.exe
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager 1.0.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Abstractions.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Container.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Container.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.ErrorMessageView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.MainView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Forms.DirectoryView.resources

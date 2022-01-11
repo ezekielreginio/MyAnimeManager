@@ -1,6 +1,6 @@
 ﻿namespace MyAnimeManager_1._0.Forms
 {
-    partial class Directory
+    partial class DirectoryView
     {
         /// <summary>
         /// Required designer variable.
@@ -71,6 +71,7 @@
             this.buttonSelectDirectory.TabIndex = 1;
             this.buttonSelectDirectory.Text = "Set Directory";
             this.buttonSelectDirectory.UseVisualStyleBackColor = false;
+            this.buttonSelectDirectory.Click += new System.EventHandler(this.buttonSelectDirectory_Click);
             // 
             // label2
             // 
@@ -85,7 +86,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Your Anime Directory is Not Set";
             // 
-            // Directory
+            // DirectoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +94,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelNoDirectory);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Directory";
+            this.Name = "DirectoryView";
             this.Text = "Directory";
             this.panelNoDirectory.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

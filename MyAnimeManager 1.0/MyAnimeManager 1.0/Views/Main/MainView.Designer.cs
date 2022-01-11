@@ -1,6 +1,6 @@
 ﻿namespace MyAnimeManager_1._0
 {
-    partial class Form1
+    partial class MainView
     {
         /// <summary>
         /// Required designer variable.
@@ -201,6 +201,7 @@
             this.buttonConenctMAL.TabIndex = 1;
             this.buttonConenctMAL.Text = "Connect to MAL";
             this.buttonConenctMAL.UseVisualStyleBackColor = false;
+            this.buttonConenctMAL.Click += new System.EventHandler(this.buttonConenctMAL_Click);
             // 
             // label3
             // 
@@ -233,7 +234,7 @@
             this.bunifuElipse2.ElipseRadius = 5;
             this.bunifuElipse2.TargetControl = this.buttonConenctMAL;
             // 
-            // Form1
+            // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,8 +244,8 @@
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
