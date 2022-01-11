@@ -105,7 +105,7 @@ namespace InfrastructureLayer.DataAccess.Repositories.Specific.Directory
             }
         }
 
-        public void Delete(DirectoryModel departmentModel)
+        public void Delete(DirectoryModel directoryModel)
         {
             throw new NotImplementedException();
         }
@@ -151,10 +151,57 @@ namespace InfrastructureLayer.DataAccess.Repositories.Specific.Directory
             return directoryModel;
         }
 
-        public void Update(DirectoryModel departmentModel)
+        public void Update(DirectoryModel directoryModel)
         {
             int result = -1;
             DataAccessStatus dataAccessStatus = new DataAccessStatus();
+
+            using (SQLiteConnection sqliteConnection = new SQLiteConnection(_connectionString))
+            {
+                openSQLConnection(sqliteConnection, dataAccessStatus);
+
+                string sql = "UPDATE " + AnimeDirectoryConstants.ANIME_DIRECTORY + "" +
+                    "SET "+AnimeDirectoryConstants.ANIME_DIRECTORY_PATH+" = @DirectoryPath"+"" +
+                    "WHERE "+AnimeDirectoryConstants.ANIME_DIRECTORY_ID+"=0";
+
+                using(SQLiteCommand cmd = new SQLiteCommand(sqliteConnection))
+                {
+                    try
+                    {
+                        RecordExistCheck(cmd, directoryModel, TypeOfExistenceCheck.DoesExistInDB, RequestType.Update);
+                    }
+                    catch(DataAccessException e)
+                    {
+                        e.DataAccessStatusInfo.CustomMessage = "Directory Record Already Exists in the Database";
+                        e.DataAccessStatusInfo.ExceptionMessage = String.Copy(e.Message);
+                        e.DataAccessStatusInfo.StackTrace = String.Copy(e.StackTrace);
+                        throw e;
+                    }
+
+                    cmd.CommandText = sql;
+
+                    cmd.Prepare();
+                    cmd.Parameters.AddWithValue("@DirectoryPath", directoryModel.DirectoryPath);
+
+                    try
+                    {
+                        result = cmd.ExecuteNonQuery();
+                    }
+                    catch (SQLiteException e)
+                    {
+                        dataAccessStatus.setValues(status: "Error",
+                            operationSucceeded: false,
+                            exceptionMessage: e.Message,
+                            customMessage: "Unable to Update Directory",
+                            helpLink: e.HelpLink,
+                            errorCode: e.ErrorCode,
+                            stackTrace: e.StackTrace);
+
+                        throw new DataAccessException(e.Message, e.InnerException, dataAccessStatus);
+                    }
+                }
+                sqliteConnection.Close();
+            }
         }
 
         //Private Methods
@@ -166,7 +213,7 @@ namespace InfrastructureLayer.DataAccess.Repositories.Specific.Directory
 
             cmd.Prepare();
 
-            if((requestType == RequestType.Add) || (requestType == RequestType.ConfirmAdd))
+            if((requestType == RequestType.Add) || (requestType == RequestType.Update))
             {
                 cmd.CommandText = "SELECT count(*) FROM "+AnimeDirectoryConstants.ANIME_DIRECTORY+"" +
                     "WHERE "+AnimeDirectoryConstants.ANIME_DIRECTORY_ID+"=0";
@@ -190,8 +237,36 @@ namespace InfrastructureLayer.DataAccess.Repositories.Specific.Directory
                 RecordExistsCheckPassed = false;
                 throw new DataAccessException(dataAccessStatus);
             }
+            else if ((typeOfExistenceCheck == TypeOfExistenceCheck.DoesExistInDB) && (countOfRecsFound == 0))
+            {
+                dataAccessStatus.Status = "Error";
+                dataAccessStatus.CustomMessage = "Directory Record Does Not Exist";
+                dataAccessStatus.ErrorCode = 0;
+                RecordExistsCheckPassed = false;
+                throw new DataAccessException(dataAccessStatus);
+            }
 
             return RecordExistsCheckPassed;
+        }
+        private void openSQLConnection(SQLiteConnection sqliteConnection, DataAccessStatus dataAccessStatus)
+        {
+            try
+            {
+                sqliteConnection.Open();
+            }
+            catch (SQLiteException e)
+            {
+                //Could not open a database connection
+                dataAccessStatus.setValues(status: "Error",
+                    operationSucceeded: false,
+                    exceptionMessage: e.Message,
+                    customMessage: "Unable to Add Directory. Could not open a database connection",
+                    helpLink: "",
+                    errorCode: e.ErrorCode,
+                    stackTrace: e.StackTrace);
+
+                throw new DataAccessException(e.Message, e.InnerException, dataAccessStatus);
+            }
         }
     }
 }
