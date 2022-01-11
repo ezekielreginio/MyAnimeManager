@@ -1,0 +1,6 @@
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Debug\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Debug\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.csproj.AssemblyReference.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.pdb

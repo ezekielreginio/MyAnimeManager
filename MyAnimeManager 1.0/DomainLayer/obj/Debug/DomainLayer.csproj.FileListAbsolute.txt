@@ -1,0 +1,6 @@
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Debug\DomainLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Debug\DomainLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Debug\DomainLayer.csproj.AssemblyReference.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Debug\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Debug\DomainLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Debug\DomainLayer.pdb

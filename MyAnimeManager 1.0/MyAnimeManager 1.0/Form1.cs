@@ -29,6 +29,7 @@ namespace MyAnimeManager_1._0
             random = new Random();
             //Open Directory Form
             OpenChildForm(new Forms.Directory(), null);
+            //Console.WriteLine("Directory: " + AppDomain.CurrentDomain.BaseDirectory);
         }
 
         //Private Methods

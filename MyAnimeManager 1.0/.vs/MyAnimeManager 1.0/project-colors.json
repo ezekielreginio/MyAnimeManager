@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fa7e2d8f-caa6-42dc-b4d2-0657363fe413": {
+      "ProjectGuid": "fa7e2d8f-caa6-42dc-b4d2-0657363fe413",
+      "DisplayName": "MyAnimeManager 1.0",
+      "ColorIndex": 0
+    },
+    "44794bef-4503-437b-9e74-cd2a9efb775c": {
+      "ProjectGuid": "44794bef-4503-437b-9e74-cd2a9efb775c",
+      "DisplayName": "DomainLayer",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
