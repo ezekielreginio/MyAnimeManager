@@ -22,3 +22,7 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Test
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.csproj.CopyComplete
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\obj\Debug\ServiceLayer.Tests.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\System.Data.SQLite.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\System.Data.SQLite.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\CommonComponents.pdb

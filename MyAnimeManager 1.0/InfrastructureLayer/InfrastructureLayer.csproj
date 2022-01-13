@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -61,7 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\Repositories\IRestfulRepository.cs" />
+    <Compile Include="DataAccess\Repositories\RestfulRepository.cs" />
     <Compile Include="DataAccess\Repositories\Specific\Directory\DirectoryRepository.cs" />
+    <Compile Include="DataAccess\Repositories\Specific\Directory\IDirectoryRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,14 +78,6 @@
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj">
       <Project>{04c7413c-663b-46f3-b204-507c9ece5451}</Project>
       <Name>DomainLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceLayer.Tests\ServiceLayer.Tests.csproj">
-      <Project>{d63b6951-75d4-4936-a317-9314374d6316}</Project>
-      <Name>ServiceLayer.Tests</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj">
-      <Project>{94d8a76a-a04a-4586-bd78-a825938d4ed1}</Project>
-      <Name>ServiceLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

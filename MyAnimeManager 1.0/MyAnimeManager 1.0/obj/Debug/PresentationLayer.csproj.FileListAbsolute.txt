@@ -1,0 +1,55 @@
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\MyAnimeManager 1.0.exe.config
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\MyAnimeManager 1.0.exe
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\MyAnimeManager 1.0.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu_UI_v1.5.3.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Properties.Resources.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.CopyComplete
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager 1.0.exe
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager 1.0.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Abstractions.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Container.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Abstractions.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Unity.Container.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.ErrorMessageView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.MainView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Forms.DirectoryView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\InfrastructureLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\ServiceLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\DomainLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Data.SQLite.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\InfrastructureLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\InfrastructureLayer.dll.config
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\ServiceLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\DomainLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\System.Data.SQLite.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.UserControls.FolderItem.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.Main.Forms.LoginView.resources
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Newtonsoft.Json.xml

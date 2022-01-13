@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAnimeManager 1.0", "MyAnimeManager 1.0\MyAnimeManager 1.0.csproj", "{FA7E2D8F-CAA6-42DC-B4D2-0657363FE413}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentationLayer", "MyAnimeManager 1.0\PresentationLayer.csproj", "{FA7E2D8F-CAA6-42DC-B4D2-0657363FE413}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{04C7413C-663B-46F3-B204-507C9ECE5451}"
 EndProject

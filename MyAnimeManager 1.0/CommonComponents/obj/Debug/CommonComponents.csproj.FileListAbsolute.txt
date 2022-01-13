@@ -4,3 +4,6 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.csproj.CoreCompileInputs.cache
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Debug\System.Data.SQLite.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Debug\System.Data.SQLite.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Debug\CommonComponents.csproj.CopyComplete
