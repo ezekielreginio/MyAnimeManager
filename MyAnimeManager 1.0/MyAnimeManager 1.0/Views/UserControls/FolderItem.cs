@@ -70,15 +70,18 @@ namespace MyAnimeManager_1._0.Views.UserControls
             this.BackColor = Color.FromArgb(30, 30, 30);
         }
 
-        //Event Bindings
-        private void pictureBoxFolderIcon_Click(object sender, EventArgs e)
+        private void labelFolderName_Click(object sender, EventArgs e)
         {
             _callback(labelFolderName.Text, _index);
         }
 
-        private void labelFolderName_Click(object sender, EventArgs e)
+        private void pictureBoxFolderIcon_MouseUp(object sender, MouseEventArgs e)
         {
-            _callback(labelFolderName.Text, _index);
+            if (e.Button == MouseButtons.Left)
+            {
+                _callback(labelFolderName.Text, _index);
+            }
+            
         }
     }
 }

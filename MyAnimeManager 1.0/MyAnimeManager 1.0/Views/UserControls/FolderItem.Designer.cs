@@ -43,7 +43,7 @@
             this.pictureBoxFolderIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxFolderIcon.TabIndex = 0;
             this.pictureBoxFolderIcon.TabStop = false;
-            this.pictureBoxFolderIcon.Click += new System.EventHandler(this.pictureBoxFolderIcon_Click);
+            this.pictureBoxFolderIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFolderIcon_MouseUp);
             // 
             // labelFolderName
             // 

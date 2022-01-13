@@ -5,6 +5,7 @@ using MyAnimeManager_1._0.Presenters;
 using MyAnimeManager_1._0.Presenters.Main.Forms;
 using MyAnimeManager_1._0.Views;
 using MyAnimeManager_1._0.Views.Main.Forms;
+using MyAnimeManager_1._0.Views.Main.UserControls;
 using MyAnimeManager_1._0.Views.UserControls;
 using ServiceLayer.CommonServices;
 using ServiceLayer.Services;
@@ -34,20 +35,25 @@ namespace MyAnimeManager_1._0
                 AppDomain.CurrentDomain.BaseDirectory+ @"MyAnimeManager.sqlite";
             Console.WriteLine("SQLite Directory: "+_connectionString);
             UnityC = new UnityContainer()
+                //Views
                 .RegisterType<IMainView, MainView>(new ContainerControlledLifetimeManager())
-                .RegisterType<IMainPresenter, MainPresenter>(new ContainerControlledLifetimeManager())
                 .RegisterType<IErrorMessageView, ErrorMessageView>(new ContainerControlledLifetimeManager())
                 .RegisterType<IDirectoryView, DirectoryView>(new ContainerControlledLifetimeManager())
-                .RegisterType<IDirectoryPresenter, DirectoryPresenter>(new ContainerControlledLifetimeManager())
-                .RegisterType<IDirectoryServices, DirectoryServices>(new ContainerControlledLifetimeManager())
-                .RegisterType<IDirectoryRepository, DirectoryRepository>(new InjectionConstructor(_connectionString))
                 .RegisterType<ILoginView, LoginView>(new ContainerControlledLifetimeManager())
-
+                .RegisterType<IProfileView, ProfileView>(new ContainerControlledLifetimeManager())
                 .RegisterType<IFolderItem, FolderItem>(new ContainerControlledLifetimeManager())
-
+                //Presenters
+                .RegisterType<IMainPresenter, MainPresenter>(new ContainerControlledLifetimeManager())
+                .RegisterType<IDirectoryPresenter, DirectoryPresenter>(new ContainerControlledLifetimeManager())
+                //Repositories
                 .RegisterType<IRestfulRepository, RestfulRepository>(new InjectionConstructor(_connectionString))
+                .RegisterType<IDirectoryRepository, DirectoryRepository>(new InjectionConstructor(_connectionString))
+                //Services
                 .RegisterType<IRestfulService, RestfulService>(new ContainerControlledLifetimeManager())
+                .RegisterType<IDirectoryServices, DirectoryServices>(new ContainerControlledLifetimeManager())
+                //Annotation Checker
                 .RegisterType<IModelDataAnnotationCheck, ModelDataAnnotationCheck>(new ContainerControlledLifetimeManager());
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -109,12 +109,13 @@
       <DependentUpon>ErrorMessageView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ErrorMessage\IErrorMessageView.cs" />
-    <Compile Include="Views\Main\Forms\IDirectoryView.cs" />
-    <Compile Include="Views\Main\Forms\ILoginView.cs" />
-    <Compile Include="Views\Main\Forms\LoginView.cs">
+    <Compile Include="Views\Main\UserControls\IDirectoryView.cs" />
+    <Compile Include="Views\Main\UserControls\ILoginView.cs" />
+    <Compile Include="Views\Main\UserControls\IProfileView.cs" />
+    <Compile Include="Views\Main\UserControls\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main\Forms\LoginView.Designer.cs">
+    <Compile Include="Views\Main\UserControls\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Main\IMainView.cs" />
@@ -124,14 +125,20 @@
     <Compile Include="Views\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Main\Forms\DirectoryView.cs">
+    <Compile Include="Views\Main\UserControls\DirectoryView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main\Forms\DirectoryView.Designer.cs">
+    <Compile Include="Views\Main\UserControls\DirectoryView.Designer.cs">
       <DependentUpon>DirectoryView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Main\UserControls\ProfileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UserControls\ProfileView.Designer.cs">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UserControls\FolderItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,13 +149,13 @@
     <EmbeddedResource Include="Views\ErrorMessage\ErrorMessageView.resx">
       <DependentUpon>ErrorMessageView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main\Forms\LoginView.resx">
+    <EmbeddedResource Include="Views\Main\UserControls\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main\Forms\DirectoryView.resx">
+    <EmbeddedResource Include="Views\Main\UserControls\DirectoryView.resx">
       <DependentUpon>DirectoryView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -161,6 +168,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Main\UserControls\ProfileView.resx">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\FolderItem.resx">
       <DependentUpon>FolderItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +214,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\default_folder_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-gray.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

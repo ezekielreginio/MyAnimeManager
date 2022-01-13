@@ -2,6 +2,7 @@
 using DomainLayer.Models;
 using MyAnimeManager_1._0.Forms;
 using MyAnimeManager_1._0.Views.UserControls;
+using ServiceLayer.Services;
 using ServiceLayer.Services.DirectoryServices;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
 
         IDirectoryView _directoryView;
         IDirectoryServices _directoryServices;
+        IRestfulService _restfulService;
         IFolderItem _folderItem;
 
         private List<FolderItem> listFolderItems = new List<FolderItem>();
@@ -92,10 +94,14 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
 
         //-------------------------------------------------  (END GET STOCK ICON -----------------------------------------------------------------------//
 
-        public DirectoryPresenter(IDirectoryView directoryView, IDirectoryServices directoryServices, IFolderItem folderItem)
+        public DirectoryPresenter(IDirectoryView directoryView,
+                                  IDirectoryServices directoryServices,
+                                  IRestfulService restfulService,
+                                  IFolderItem folderItem)
         {
             _directoryView = directoryView;
             _directoryServices = directoryServices;
+            _restfulService = restfulService;
             _folderItem = folderItem;
             SubscribeToEventsSetup();
             //DirectoryModel model = _directoryServices.Get();
@@ -149,19 +155,17 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 DirectoryInfo directoryInfo = new DirectoryInfo(item);
                 ListViewItem viewItem = new ListViewItem();
                 string iconPath = GetIconPath(directoryInfo.FullName);
-                UserControl folderItem = null;
+                FolderItem folderItem = new FolderItem(CallbackOnFolderLeftClick, loopCtr);
                 if (!String.IsNullOrEmpty(iconPath))
                 {
-                    folderItem = new FolderItem(CallbackOnClick, loopCtr).SetFolderIcon(iconPath, directoryInfo.Name);
+                    folderItem = (FolderItem)folderItem.SetFolderIcon(iconPath, directoryInfo.Name);
                     _directoryView.GetListViewDirectory().Controls.Add(folderItem);
                 }
                 else
                 {
-                    folderItem = new FolderItem(CallbackOnClick, loopCtr).SetFolderIcon(directoryInfo.Name);
+                    folderItem = (FolderItem)folderItem.SetFolderIcon(directoryInfo.Name);
                     _directoryView.GetListViewDirectory().Controls.Add(folderItem);
                 }
-                    
-
                 listFolderItems.Add((FolderItem)folderItem);
                 loopCtr++;
             }
@@ -190,13 +194,14 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 }
             }
         }
-        private void CallbackOnClick(String folderName, int index)
+        private void CallbackOnFolderLeftClick(String folderName, int index)
         {
             Console.WriteLine("Folder Name: " + folderName);
             if (currentlySelected != null)
                 currentlySelected.Deselect();
             currentlySelected = listFolderItems[index];
             listFolderItems[index].SetSelected();
+            
         }
     }
 }

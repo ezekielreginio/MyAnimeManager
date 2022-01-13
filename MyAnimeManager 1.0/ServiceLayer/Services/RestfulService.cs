@@ -1,5 +1,7 @@
-﻿using InfrastructureLayer.DataAccess.Repositories;
+﻿using CommonComponents;
+using InfrastructureLayer.DataAccess.Repositories;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +27,7 @@ namespace ServiceLayer.Services
             _restfulRepository = restfulRepository;
         }
 
-        public async Task<int> LoginUser(String authorizationCode)
+        public async Task<dynamic> LoginUser(String authorizationCode)
         {
             string requestURL = "https://myanimelist.net/v1/oauth2/token";
             string accessToken;
@@ -48,7 +50,9 @@ namespace ServiceLayer.Services
                 bool isAddSuccess = _restfulRepository.AddAccessToken(accessToken);
                 if (isAddSuccess)
                 {
-                    int isUserStatisticsAvailable = await GetAnimeStatisticsUsingToken();
+                    Console.WriteLine("Added Successfully");
+                    dynamic jsonUserData = await GetAnimeStatisticsUsingToken();
+                    return jsonUserData;
                 }
                 //jsonConfig = JSONController.initializeAccessToken();
                 //jsonConfig = JsonConvert.DeserializeObject(File.ReadAllText("config.json"));
@@ -62,11 +66,11 @@ namespace ServiceLayer.Services
                 //return 200;
             }
             else
-                return 400;
-            return 0;
+                return null;
+            return null;
         }
 
-        public async Task<int> GetAnimeStatisticsUsingToken()
+        public async Task<dynamic> GetAnimeStatisticsUsingToken()
         {
             string accessToken = _restfulRepository.GetAccessToken();
             HttpClient client = new HttpClient();
@@ -76,17 +80,71 @@ namespace ServiceLayer.Services
             req.Headers.Add("Authorization", "Bearer " + accessToken);
 
             HttpResponseMessage response = await client.SendAsync(req);
-            Console.WriteLine(response);
             if (response.IsSuccessStatusCode)
             {
                 String animeStatistics = await response.Content.ReadAsStringAsync();
                 dynamic jsonUserData = JsonConvert.DeserializeObject(animeStatistics);
-                Console.WriteLine("Calling Add");
-                _restfulRepository.AddProfileData(animeStatistics);
-                return 200;
+                return jsonUserData;
             }
             else
-                return (int)response.StatusCode;
+                return null;
+        }
+        public async Task<dynamic> GetAnimeDetails(String title)
+        {
+            HttpClient client = new HttpClient();
+            string requestURL = "https://api.myanimelist.net/v2/anime?q=" + title + "&limit=1";
+            string accessToken = _restfulRepository.GetAccessToken();
+            int maxChar = 50;
+            if (title.Length < maxChar)
+            {
+                maxChar = title.Length - 1;
+            }
+
+            var req = setRequest(HttpMethod.Get, "https://api.myanimelist.net/v2/anime?q=" + title.Substring(0, maxChar) + "&limit=10", accessToken);
+
+            HttpResponseMessage response = await client.SendAsync(req);
+
+            if (response.IsSuccessStatusCode)
+            {
+                String animeQuery = await response.Content.ReadAsStringAsync();
+                dynamic jsonAnimeResult = JsonConvert.DeserializeObject(animeQuery);
+                int animeID = -1;
+                for (int i = 0; i < ((JArray)jsonAnimeResult["data"]).Count; i++)
+                {
+                    dynamic anime = jsonAnimeResult["data"][i];
+                    Console.WriteLine(anime["node"]["title"]);
+                    if (title.ToLower().Equals(StringExtensions.RemoveSpecialCharacters((String)anime["node"]["title"]).ToLower()))
+                    {
+                        animeID = jsonAnimeResult["data"][i]["node"]["id"];
+                        break;
+                    }
+
+                }
+
+                var reqAnime = setRequest(HttpMethod.Get, "https://api.myanimelist.net/v2/anime/" + animeID + "?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_episodes,start_season,broadcast,source,average_episode_duration,rating,pictures,background,related_anime,related_manga,recommendations,studios,statistics", accessToken);
+                client = new HttpClient();
+                HttpResponseMessage responseAnime = await client.SendAsync(reqAnime);
+                //Console.WriteLine(responseAnime);
+                if (responseAnime.IsSuccessStatusCode)
+                {
+                    String animeDetails = await responseAnime.Content.ReadAsStringAsync();
+                    //Console.WriteLine("Anime Details: " + animeDetails);
+                    return JsonConvert.DeserializeObject(animeDetails);
+                }
+                else return null;
+
+            }
+            else return null;
+            return null;
+        }
+
+        //Private Methods
+        private static dynamic setRequest(HttpMethod method, String requestURL, String accessToken)
+        {
+            dynamic req = new HttpRequestMessage(method, requestURL) { };
+            req.Headers.Add("Authorization", "Bearer " + accessToken);
+
+            return req;
         }
     }
 }

@@ -38,12 +38,8 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelLeftLogin = new System.Windows.Forms.Panel();
-            this.buttonConenctMAL = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -51,8 +47,6 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
-            this.panelLeft.SuspendLayout();
-            this.panelLeftLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -169,70 +163,24 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
-            this.panelLeft.Controls.Add(this.panelLeftLogin);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(55, 60);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(248, 390);
+            this.panelLeft.Size = new System.Drawing.Size(260, 390);
             this.panelLeft.TabIndex = 2;
-            // 
-            // panelLeftLogin
-            // 
-            this.panelLeftLogin.Controls.Add(this.buttonConenctMAL);
-            this.panelLeftLogin.Controls.Add(this.label3);
-            this.panelLeftLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeftLogin.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftLogin.Name = "panelLeftLogin";
-            this.panelLeftLogin.Size = new System.Drawing.Size(248, 390);
-            this.panelLeftLogin.TabIndex = 1;
-            // 
-            // buttonConenctMAL
-            // 
-            this.buttonConenctMAL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonConenctMAL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(146)))));
-            this.buttonConenctMAL.FlatAppearance.BorderSize = 0;
-            this.buttonConenctMAL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConenctMAL.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConenctMAL.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonConenctMAL.Location = new System.Drawing.Point(52, 123);
-            this.buttonConenctMAL.Name = "buttonConenctMAL";
-            this.buttonConenctMAL.Size = new System.Drawing.Size(149, 33);
-            this.buttonConenctMAL.TabIndex = 1;
-            this.buttonConenctMAL.Text = "Connect to MAL";
-            this.buttonConenctMAL.UseVisualStyleBackColor = false;
-            this.buttonConenctMAL.Click += new System.EventHandler(this.buttonConenctMAL_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.label3.Size = new System.Drawing.Size(95, 31);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "MAL Profile";
             // 
             // panelDesktop
             // 
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(303, 60);
+            this.panelDesktop.Location = new System.Drawing.Point(315, 60);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(638, 390);
+            this.panelDesktop.Size = new System.Drawing.Size(626, 390);
             this.panelDesktop.TabIndex = 3;
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 5;
-            this.bunifuElipse2.TargetControl = this.buttonConenctMAL;
             // 
             // MainView
             // 
@@ -244,10 +192,11 @@
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -256,9 +205,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
-            this.panelLeft.ResumeLayout(false);
-            this.panelLeftLogin.ResumeLayout(false);
-            this.panelLeftLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -276,10 +222,6 @@
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelDesktop;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panelLeftLogin;
-        private System.Windows.Forms.Button buttonConenctMAL;
-        private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }
 

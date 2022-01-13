@@ -4,6 +4,8 @@ namespace ServiceLayer.Services
 {
     public interface IRestfulService
     {
-        Task<int> LoginUser(string authorizationCode);
+        Task<dynamic> LoginUser(string authorizationCode);
+
+        Task<dynamic> GetAnimeStatisticsUsingToken();
     }
 }

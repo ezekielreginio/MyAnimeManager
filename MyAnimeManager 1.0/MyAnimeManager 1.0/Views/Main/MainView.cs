@@ -24,27 +24,19 @@ namespace MyAnimeManager_1._0
         //Fields
         private IconPictureBox currentButton;
         private Form activeDesktopForm;
+        private UserControl activeLeftPanel;
         private Random random;
         private int tempIndex;
-        private IUnityContainer UnityC;
 
         //Event Handlers
         public event EventHandler SelectDirectoryClickEventRaised;
+        
 
         //Constructor
         public MainView()
         {
             InitializeComponent();
             random = new Random();
-            //UnityC = new UnityContainer()
-            //    .RegisterType<IDirectoryView, DirectoryView>(new ContainerControlledLifetimeManager())
-            //    .RegisterType<IDirectoryPresenter, DirectoryPresenter>(new ContainerControlledLifetimeManager());
-
-            ////Open Directory Form
-            //IDirectoryPresenter directoryPresenter = UnityC.Resolve<DirectoryPresenter>();
-            //IDirectoryView directoryView = directoryPresenter.GetDirectoryView();
-            //OpenChildForm(directoryView.GetDirectoryForm(), null);
-            //Console.WriteLine("Directory: " + AppDomain.CurrentDomain.BaseDirectory);
         }
 
         //Public Methods
@@ -109,6 +101,20 @@ namespace MyAnimeManager_1._0
             childForm.Show();
         }
 
+        public void OpenLeftPanel(UserControl userControl)
+        {
+            if (activeLeftPanel != null)
+            {
+                activeLeftPanel.Dispose();
+            }
+            activeLeftPanel = userControl;
+            userControl.Dock = DockStyle.Fill;
+            this.panelLeft.Controls.Add(userControl);
+            this.panelLeft.Tag = userControl;
+            userControl.BringToFront();
+            userControl.Show();
+        }
+
         //Event Bindings
         private void iconPictureBox1_Click(object sender, EventArgs e)
         {
@@ -126,9 +132,6 @@ namespace MyAnimeManager_1._0
             ActivateButton(sender);
         }
 
-        private void buttonConenctMAL_Click(object sender, EventArgs e)
-        {
-            EventHelpers.RaiseEvent(this, SelectDirectoryClickEventRaised, e);
-        }
+        
     }
 }

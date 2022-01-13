@@ -53,3 +53,4 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.Main.UserControls.ProfileView.resources

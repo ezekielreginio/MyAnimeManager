@@ -8,6 +8,7 @@ namespace MyAnimeManager_1._0
         event EventHandler SelectDirectoryClickEventRaised;
 
         void OpenChildForm(Form childForm, object btnSender);
+        void OpenLeftPanel(UserControl userControl);
         void ShowMainView();
     }
 }
