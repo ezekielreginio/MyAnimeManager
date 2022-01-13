@@ -63,6 +63,16 @@ namespace MyAnimeManager_1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_folder_icon {
+            get {
+                object obj = ResourceManager.GetObject("default_folder_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MAM1 {
             get {
                 object obj = ResourceManager.GetObject("MAM1", resourceCulture);

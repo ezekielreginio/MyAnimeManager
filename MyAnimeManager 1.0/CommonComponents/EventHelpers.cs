@@ -19,5 +19,6 @@ namespace CommonComponents
             if (eventHandlerRaised != null) //Check if any subscribed to this event
                 eventHandlerRaised(objectRaisingEvent, eventArgs); //Notify all subscribers
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using DomainLayer.Models;
+﻿using CommonComponents;
+using DomainLayer.Models;
+using InfrastructureLayer.DataAccess.Repositories.Specific.Directory;
 using ServiceLayer.CommonServices;
 using System;
 using System.Collections.Generic;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ServiceLayer.Services.DirectoryServices
 {
-    public class DirectoryServices: IDirectoryServices, IDirectoryRepository
+    public class DirectoryServices: IDirectoryServices
     {
         IDirectoryRepository _directoryRepository;
         private IModelDataAnnotationCheck _modelDataAnnotationCheck;
@@ -19,9 +21,13 @@ namespace ServiceLayer.Services.DirectoryServices
             _modelDataAnnotationCheck = modelDataAnnotationCheck;
         }
 
-        public void Add(DirectoryModel departmentModel)
+        public DirectoryModel Add(String directory)
         {
-            throw new NotImplementedException();
+            DirectoryModel model = new DirectoryModel();   
+            model.DirectoryPath = directory;
+            _directoryRepository.Add(model);
+
+            return model;
         }
 
         public void Delete(DirectoryModel departmentModel)
@@ -31,7 +37,18 @@ namespace ServiceLayer.Services.DirectoryServices
 
         public DirectoryModel Get()
         {
-            throw new NotImplementedException();
+            try
+            {
+                DirectoryModel model = _directoryRepository.Get();
+                Console.WriteLine("Current Directory: " +model.DirectoryPath);
+                return model;
+            }
+            catch(DataAccessException e)
+            {
+                Console.WriteLine("Directory Not Found");
+                return null;
+            }
+             
         }
 
         public void Update(DirectoryModel departmentModel)

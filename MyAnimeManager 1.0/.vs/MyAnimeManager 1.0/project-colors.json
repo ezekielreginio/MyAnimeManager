@@ -3,14 +3,44 @@
   "ProjectMap": {
     "fa7e2d8f-caa6-42dc-b4d2-0657363fe413": {
       "ProjectGuid": "fa7e2d8f-caa6-42dc-b4d2-0657363fe413",
-      "DisplayName": "MyAnimeManager 1.0",
+      "DisplayName": "PresentationLayer",
       "ColorIndex": 0
     },
     "44794bef-4503-437b-9e74-cd2a9efb775c": {
       "ProjectGuid": "44794bef-4503-437b-9e74-cd2a9efb775c",
       "DisplayName": "DomainLayer",
       "ColorIndex": 1
+    },
+    "04c7413c-663b-46f3-b204-507c9ece5451": {
+      "ProjectGuid": "04c7413c-663b-46f3-b204-507c9ece5451",
+      "DisplayName": "DomainLayer",
+      "ColorIndex": 2
+    },
+    "94d8a76a-a04a-4586-bd78-a825938d4ed1": {
+      "ProjectGuid": "94d8a76a-a04a-4586-bd78-a825938d4ed1",
+      "DisplayName": "ServiceLayer",
+      "ColorIndex": 3
+    },
+    "d63b6951-75d4-4936-a317-9314374d6316": {
+      "ProjectGuid": "d63b6951-75d4-4936-a317-9314374d6316",
+      "DisplayName": "ServiceLayer.Tests",
+      "ColorIndex": 4
+    },
+    "a96eac5e-8d8c-4c5d-a7b8-d19b538d92af": {
+      "ProjectGuid": "a96eac5e-8d8c-4c5d-a7b8-d19b538d92af",
+      "DisplayName": "InfrastructureLayer",
+      "ColorIndex": 5
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "b7ead35e-a9a6-4753-be6b-9bd022fcc836": {
+      "ProjectGuid": "b7ead35e-a9a6-4753-be6b-9bd022fcc836",
+      "DisplayName": "CommonComponents",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 7
 }

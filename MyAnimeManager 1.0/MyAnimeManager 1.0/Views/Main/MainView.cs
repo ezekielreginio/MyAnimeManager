@@ -36,15 +36,15 @@ namespace MyAnimeManager_1._0
         {
             InitializeComponent();
             random = new Random();
-            UnityC = new UnityContainer()
-                .RegisterType<IDirectoryView, DirectoryView>(new ContainerControlledLifetimeManager())
-                .RegisterType<IDirectoryPresenter, DirectoryPresenter>(new ContainerControlledLifetimeManager());
+            //UnityC = new UnityContainer()
+            //    .RegisterType<IDirectoryView, DirectoryView>(new ContainerControlledLifetimeManager())
+            //    .RegisterType<IDirectoryPresenter, DirectoryPresenter>(new ContainerControlledLifetimeManager());
 
-            //Open Directory Form
-            IDirectoryPresenter directoryPresenter = UnityC.Resolve<DirectoryPresenter>();
-            IDirectoryView directoryView = directoryPresenter.GetDirectoryView();
-            OpenChildForm(directoryView.GetDirectoryForm(), null);
-            Console.WriteLine("Directory: " + AppDomain.CurrentDomain.BaseDirectory);
+            ////Open Directory Form
+            //IDirectoryPresenter directoryPresenter = UnityC.Resolve<DirectoryPresenter>();
+            //IDirectoryView directoryView = directoryPresenter.GetDirectoryView();
+            //OpenChildForm(directoryView.GetDirectoryForm(), null);
+            //Console.WriteLine("Directory: " + AppDomain.CurrentDomain.BaseDirectory);
         }
 
         //Public Methods
@@ -93,7 +93,7 @@ namespace MyAnimeManager_1._0
             return ColorTranslator.FromHtml(color);
         }
 
-        private void OpenChildForm(Form childForm, object btnSender)
+        public void OpenChildForm(Form childForm, object btnSender)
         {
             if (activeDesktopForm != null)
             {

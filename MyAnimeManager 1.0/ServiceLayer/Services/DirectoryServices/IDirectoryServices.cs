@@ -10,5 +10,7 @@ namespace ServiceLayer.Services.DirectoryServices
     public interface IDirectoryServices
     {
         void ValidateModel(DirectoryModel directoryModel);
+        DirectoryModel Add(String directory);
+        DirectoryModel Get();
     }
 }
