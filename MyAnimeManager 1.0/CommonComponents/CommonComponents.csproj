@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="AccessTypeEventArgs.cs" />
     <Compile Include="Constants\AnimeDirectoryConstants.cs" />
+    <Compile Include="Constants\AnimeStatusConstants.cs" />
     <Compile Include="Constants\MalProfileConstants.cs" />
     <Compile Include="DataAccessException.cs" />
     <Compile Include="DataAccessStatus.cs" />

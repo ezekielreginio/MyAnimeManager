@@ -1,6 +1,7 @@
 ﻿using CommonComponents;
 using DomainLayer.Models;
 using MyAnimeManager_1._0.Forms;
+using MyAnimeManager_1._0.Views.Main.UserControls;
 using MyAnimeManager_1._0.Views.UserControls;
 using ServiceLayer.Services;
 using ServiceLayer.Services.DirectoryServices;
@@ -23,6 +24,7 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
         public event EventHandler DirectoryLoadedEventRaised;
 
         IDirectoryView _directoryView;
+        IProfileView _profileView;
         IDirectoryServices _directoryServices;
         IRestfulService _restfulService;
         IFolderItem _folderItem;
@@ -95,11 +97,13 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
         //-------------------------------------------------  (END GET STOCK ICON -----------------------------------------------------------------------//
 
         public DirectoryPresenter(IDirectoryView directoryView,
+                                  IProfileView profileView,
                                   IDirectoryServices directoryServices,
                                   IRestfulService restfulService,
                                   IFolderItem folderItem)
         {
             _directoryView = directoryView;
+            _profileView = profileView;
             _directoryServices = directoryServices;
             _restfulService = restfulService;
             _folderItem = folderItem;
@@ -194,14 +198,21 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 }
             }
         }
-        private void CallbackOnFolderLeftClick(String folderName, int index)
+        private async void CallbackOnFolderLeftClick(String folderName, int index)
         {
-            Console.WriteLine("Folder Name: " + folderName);
             if (currentlySelected != null)
                 currentlySelected.Deselect();
             currentlySelected = listFolderItems[index];
             listFolderItems[index].SetSelected();
-            
+            dynamic animeDetails = await _restfulService.GetAnimeDetails(folderName);
+            if (animeDetails != null)
+            {
+                Console.WriteLine(animeDetails);
+                _profileView.SetAnimeDetails(animeDetails);
+                _profileView.ShowAnimeDetailsPanel();
+            }
+            else
+                MessageBox.Show("Anime Not Found. The name of the folder should be exactly the same as shown in MAL");
         }
     }
 }

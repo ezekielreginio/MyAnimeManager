@@ -1,4 +1,5 @@
 ﻿using CommonComponents;
+using CommonComponents.Constants;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,46 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         {
             return this;
         }
+        public void SetAnimeDetails(dynamic animeDetails)
+        {
+            labelAnimeInfoTitle.Text = animeDetails["title"];
+            pictureBoxAnimeInfoPoster.ImageLocation = animeDetails["main_picture"]["medium"];
+
+            if (animeDetails["mean"] == null)
+                labelAnimeRating.Text = "N/A";
+            else
+                labelAnimeRating.Text = String.Format("{0:0.00}", animeDetails["mean"]);
+            labelRanked.Text = "#" + animeDetails["rank"];
+            labelPopularity.Text = "#" + animeDetails["popularity"];
+            labelUserWatchers.Text = String.Format("{0:n0}", animeDetails["num_list_users"]) + " users";
+            pictureBoxAnimeInfoPoster.ImageLocation = animeDetails["main_picture"]["medium"];
+
+            if (animeDetails["my_list_status"] != null)
+            {
+                //panelContainerAnimeStatus.BringToFront();
+                textBoxEpsSeen.Text = animeDetails["my_list_status"]["num_episodes_watched"];
+                labelNoOfeps.Text = animeDetails["num_episodes"];
+                if ((int)animeDetails["my_list_status"]["score"] != 0)
+                {
+                    bunifuDropdownYourScore.selectedIndex = 11 - (int)animeDetails["my_list_status"]["score"];
+                }
+                else
+                    bunifuDropdownYourScore.selectedIndex = 0;
+                bunifuDropdownStatus.selectedIndex = AnimeStatusConstants.getStatusArray()[(String)animeDetails["my_list_status"]["status"]];
+            }
+            else
+            {
+                //panelAnimeInfoNotAdded.BringToFront();
+            }
+
+            labelAnimeInfoStatus.Text = AnimeStatusConstants.getCurrentArray()[(String)animeDetails["status"]];
+            labelAnimeInfoSeason.Text = StringExtensions.FirstLetterToUpper((String)animeDetails["start_season"]["season"]) + " " + animeDetails["start_season"]["year"];
+            labelAnimeInfoStudio.Text = animeDetails["studios"][0]["name"];
+            labelAnimeInfoSource.Text = animeDetails["source"];
+            labelAnimeInfoGenre.Text = StringExtensions.GenerateGenreString(animeDetails["genres"]);
+
+
+        }
         public void SetUserData(dynamic userData)
         {
             labelUsername.Text = userData["name"]+"'s Profile";
@@ -47,6 +88,10 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         public void ShowProfilePanel()
         {
             panelUserProfile.BringToFront();
+        }
+        public void ShowAnimeDetailsPanel()
+        {
+            panelAnimeDetails.BringToFront();
         }
         public void ShowLoginPanel()
         {
