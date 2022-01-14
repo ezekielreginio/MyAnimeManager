@@ -16,7 +16,13 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
     {
         //Event Handlers
         public event EventHandler ConnectToMALClickEventRaised;
+        public event EventHandler AddToListClickEventRaised;
+        public event EventHandler UpdateAnimeClickEventRaised;
+        public event EventHandler DeleteAnimeClickEventRaised;
         public event EventHandler ProfileLoadedEventRaised;
+
+        public int SelectedAnimeID;
+
         public ProfileView()
         {
             InitializeComponent();
@@ -27,6 +33,38 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         {
             return this;
         }
+        public int GetSelectedAnimeID()
+        {
+            return SelectedAnimeID;
+        }
+        public int GetScore()
+        {
+            return bunifuDropdownYourScore.selectedIndex;
+        }
+        public string GetTitle() {
+            return labelAnimeInfoTitle.Text;
+        }
+        public int GetCurrentEpisode()
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(textBoxEpsSeen.Text))
+                    return Int32.Parse(textBoxEpsSeen.Text);
+                else
+                    return -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid Episode Number. It should only contain numerical characters.");
+                textBoxEpsSeen.Text = "";
+                return -1;
+            }
+        }
+        public string GetCurrentStatus()
+        {
+            return AnimeStatusConstants.getKey(bunifuDropdownStatus.selectedIndex);
+        }
+
         public void SetAnimeDetails(dynamic animeDetails)
         {
             labelAnimeInfoTitle.Text = animeDetails["title"];
@@ -53,10 +91,11 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
                 else
                     bunifuDropdownYourScore.selectedIndex = 0;
                 bunifuDropdownStatus.selectedIndex = AnimeStatusConstants.getStatusArray()[(String)animeDetails["my_list_status"]["status"]];
+                tableLayoutPanelAnimeStatus.BringToFront();
             }
             else
             {
-                //panelAnimeInfoNotAdded.BringToFront();
+                panelAnimeNotListed.BringToFront();
             }
 
             labelAnimeInfoStatus.Text = AnimeStatusConstants.getCurrentArray()[(String)animeDetails["status"]];
@@ -67,6 +106,12 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
 
 
         }
+
+        public void SetSelectedAnimeID(int selectedAnimeID)
+        {
+            this.SelectedAnimeID = selectedAnimeID;
+        }
+
         public void SetUserData(dynamic userData)
         {
             labelUsername.Text = userData["name"]+"'s Profile";
@@ -97,6 +142,10 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         {
             panelLeftLogin.BringToFront();
         }
+        public void ShowLoadingPanel()
+        {
+            panelProfileLoading.BringToFront();
+        }
 
         private void buttonConenctMAL_Click(object sender, EventArgs e)
         {
@@ -106,6 +155,26 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         private void ProfileView_Load(object sender, EventArgs e)
         {
             EventHelpers.RaiseEvent(this, ProfileLoadedEventRaised, e);
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            EventHelpers.RaiseEvent(this, UpdateAnimeClickEventRaised, e);
+        }
+
+        private void textBoxEpsSeen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void pictureBoxDeleteIcon_Click(object sender, EventArgs e)
+        {
+            EventHelpers.RaiseEvent(this, DeleteAnimeClickEventRaised, e);
+        }
+
+        private void bunifuButtonAddToList_Click(object sender, EventArgs e)
+        {
+            EventHelpers.RaiseEvent(this, AddToListClickEventRaised, e);
         }
     }
 }

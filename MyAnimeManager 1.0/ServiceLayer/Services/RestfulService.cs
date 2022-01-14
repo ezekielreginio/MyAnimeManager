@@ -1,4 +1,5 @@
 ﻿using CommonComponents;
+using DomainLayer.Models;
 using InfrastructureLayer.DataAccess.Repositories;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -121,21 +122,63 @@ namespace ServiceLayer.Services
 
                 }
 
-                var reqAnime = setRequest(HttpMethod.Get, "https://api.myanimelist.net/v2/anime/" + animeID + "?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_episodes,start_season,broadcast,source,average_episode_duration,rating,pictures,background,related_anime,related_manga,recommendations,studios,statistics", accessToken);
-                client = new HttpClient();
-                HttpResponseMessage responseAnime = await client.SendAsync(reqAnime);
-                //Console.WriteLine(responseAnime);
-                if (responseAnime.IsSuccessStatusCode)
-                {
-                    String animeDetails = await responseAnime.Content.ReadAsStringAsync();
-                    //Console.WriteLine("Anime Details: " + animeDetails);
-                    return JsonConvert.DeserializeObject(animeDetails);
-                }
-                else return null;
+                return await GetAnimeDetailsByID(animeID);
 
             }
             else return null;
-            return null;
+        }
+
+        public async Task<dynamic> GetAnimeDetailsByID(int animeID)
+        {
+            var reqAnime = setRequest(HttpMethod.Get, "https://api.myanimelist.net/v2/anime/" + animeID + "?fields=id,title,main_picture,alternative_titles,start_date,end_date,synopsis,mean,rank,popularity,num_list_users,num_scoring_users,nsfw,created_at,updated_at,media_type,status,genres,my_list_status,num_episodes,start_season,broadcast,source,average_episode_duration,rating,pictures,background,related_anime,related_manga,recommendations,studios,statistics", _restfulRepository.GetAccessToken());
+            client = new HttpClient();
+            client = new HttpClient();
+            HttpResponseMessage responseAnime = await client.SendAsync(reqAnime);
+            if (responseAnime.IsSuccessStatusCode)
+            {
+                String animeDetails = await responseAnime.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject(animeDetails);
+            }
+            else return null;
+        }
+
+            public async Task<dynamic> UpdateAnimeStatus(AnimeStatus animeStatus)
+        {
+            HttpClient client = new HttpClient();
+            var nvc = new List<KeyValuePair<string, string>>();
+            nvc.Add(new KeyValuePair<string, string>("status", animeStatus.currentStatus));
+            if(animeStatus.currentEpisode != -1)
+                nvc.Add(new KeyValuePair<string, string>("num_watched_episodes", animeStatus.currentEpisode.ToString()));
+            if (animeStatus.score > 0 && animeStatus.score < 11)
+                nvc.Add(new KeyValuePair<string, string>("score", animeStatus.score.ToString()));
+
+            var req = new HttpRequestMessage(HttpMethod.Put, "https://api.myanimelist.net/v2/anime/" + animeStatus.animeID + "/my_list_status") { Content = new FormUrlEncodedContent(nvc) };
+            req.Headers.Add("Authorization", "Bearer " + _restfulRepository.GetAccessToken());
+            HttpResponseMessage res = await client.SendAsync(req);
+            Console.WriteLine(res);
+            if (res.IsSuccessStatusCode)
+            {
+                return 200;
+            }
+            else
+            {
+                return 400;
+            }
+        }
+
+        public async Task<int> deleteAnime(int animeID)
+        {
+            HttpClient client = new HttpClient();
+            var req = setRequest(HttpMethod.Delete, "https://api.myanimelist.net/v2/anime/" + animeID + "/my_list_status", _restfulRepository.GetAccessToken());
+            HttpResponseMessage res = await client.SendAsync(req);
+            if (res.IsSuccessStatusCode)
+            {
+                return 200;
+            }
+            else
+            {
+                return 400;
+            }
         }
 
         //Private Methods

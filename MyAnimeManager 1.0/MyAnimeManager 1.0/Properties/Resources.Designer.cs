@@ -123,6 +123,16 @@ namespace MyAnimeManager_1._0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_btn {
+            get {
+                object obj = ResourceManager.GetObject("delete-btn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MAM1 {
             get {
                 object obj = ResourceManager.GetObject("MAM1", resourceCulture);

@@ -124,6 +124,20 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
             return _directoryView;
         }
 
+        public async void LoadAnimeData(int animeID)
+        {
+            dynamic animeDetails = await _restfulService.GetAnimeDetailsByID(animeID);
+            if (animeDetails != null)
+            {
+                Console.WriteLine(animeDetails);
+                _profileView.SetSelectedAnimeID((int)animeDetails["id"]);
+                _profileView.SetAnimeDetails(animeDetails);
+                _profileView.ShowAnimeDetailsPanel();
+            }
+            else
+                MessageBox.Show("Anime Not Found. The name of the folder should be exactly the same as shown in MAL");
+        }
+
         //Private Methods
         private void SubscribeToEventsSetup()
         {
@@ -208,6 +222,7 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
             if (animeDetails != null)
             {
                 Console.WriteLine(animeDetails);
+                _profileView.SetSelectedAnimeID((int)animeDetails["id"]);
                 _profileView.SetAnimeDetails(animeDetails);
                 _profileView.ShowAnimeDetailsPanel();
             }

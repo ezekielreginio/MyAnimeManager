@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileView));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.panelLeftLogin = new System.Windows.Forms.Panel();
             this.buttonConenctMAL = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,13 +76,34 @@
             this.panelProgressPtw = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelUsername = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
             this.panelAnimeDetails = new System.Windows.Forms.Panel();
+            this.panelInformation = new System.Windows.Forms.Panel();
+            this.tableLayoutAnimeInfo = new System.Windows.Forms.TableLayoutPanel();
+            this.labelAnimeInfoGenre = new System.Windows.Forms.Label();
+            this.labelAnimeInfoSource = new System.Windows.Forms.Label();
+            this.labelAnimeInfoStudio = new System.Windows.Forms.Label();
+            this.labelAnimeInfoSeason = new System.Windows.Forms.Label();
+            this.labelAnimeInfoStatus = new System.Windows.Forms.Label();
+            this.labelAnimeInfoEpisodes = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panelAnimeStatus = new System.Windows.Forms.Panel();
+            this.tableLayoutPanelAnimeStatus = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuDropdownYourScore = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuDropdownStatus = new Bunifu.Framework.UI.BunifuDropdown();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBoxEpsSeen = new Bunifu.Framework.BunifuCustomTextbox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.labelNoOfeps = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanelAnimeStatistics = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.panelAnimeRating = new System.Windows.Forms.Panel();
@@ -94,38 +118,23 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.labelRanked = new System.Windows.Forms.Label();
-            this.pictureBoxAnimeInfoPoster = new System.Windows.Forms.PictureBox();
             this.labelAnimeInfoTitle = new Bunifu.UI.WinForms.BunifuLabel();
-            this.tableLayoutPanelAnimeStatus = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuDropdownYourScore = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuDropdownStatus = new Bunifu.Framework.UI.BunifuDropdown();
-            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.textBoxEpsSeen = new Bunifu.Framework.BunifuCustomTextbox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.labelNoOfeps = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pictureBoxDeleteIcon = new System.Windows.Forms.PictureBox();
-            this.panelAnimeStatus = new System.Windows.Forms.Panel();
-            this.tableLayoutAnimeInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.labelAnimeInfoGenre = new System.Windows.Forms.Label();
-            this.labelAnimeInfoSource = new System.Windows.Forms.Label();
-            this.labelAnimeInfoStudio = new System.Windows.Forms.Label();
-            this.labelAnimeInfoSeason = new System.Windows.Forms.Label();
-            this.labelAnimeInfoStatus = new System.Windows.Forms.Label();
-            this.labelAnimeInfoEpisodes = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panelInformation = new System.Windows.Forms.Panel();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBoxAnimeInfoPoster = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUser = new System.Windows.Forms.PictureBox();
+            this.panelProfileLoading = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
+            this.panelAnimeNotListed = new System.Windows.Forms.Panel();
+            this.bunifuButtonAddToList = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panelLeftLogin.SuspendLayout();
             this.panelUserProfile.SuspendLayout();
             this.panelMalProfile.SuspendLayout();
@@ -140,27 +149,29 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.panelAnimeProgress.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.panelAnimeDetails.SuspendLayout();
+            this.panelInformation.SuspendLayout();
+            this.tableLayoutAnimeInfo.SuspendLayout();
+            this.panelAnimeStatus.SuspendLayout();
+            this.tableLayoutPanelAnimeStatus.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.tableLayoutPanelAnimeStatistics.SuspendLayout();
             this.panelAnimeRating.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnimeInfoPoster)).BeginInit();
-            this.tableLayoutPanelAnimeStatus.SuspendLayout();
-            this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDeleteIcon)).BeginInit();
-            this.panelAnimeStatus.SuspendLayout();
-            this.tableLayoutAnimeInfo.SuspendLayout();
-            this.panelInformation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnimeInfoPoster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
+            this.panelProfileLoading.SuspendLayout();
+            this.panelAnimeNotListed.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeftLogin
@@ -420,10 +431,10 @@
             this.labelOnHold.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelOnHold.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOnHold.ForeColor = System.Drawing.Color.White;
-            this.labelOnHold.Location = new System.Drawing.Point(117, 0);
+            this.labelOnHold.Location = new System.Drawing.Point(95, 0);
             this.labelOnHold.Margin = new System.Windows.Forms.Padding(0);
             this.labelOnHold.Name = "labelOnHold";
-            this.labelOnHold.Size = new System.Drawing.Size(27, 17);
+            this.labelOnHold.Size = new System.Drawing.Size(29, 17);
             this.labelOnHold.TabIndex = 6;
             this.labelOnHold.Text = "100";
             this.labelOnHold.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -434,10 +445,10 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(20, 0);
+            this.label5.Location = new System.Drawing.Point(14, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 0;
             this.label5.Text = "On-Hold";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -549,10 +560,10 @@
             this.labelCompleted.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCompleted.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCompleted.ForeColor = System.Drawing.Color.White;
-            this.labelCompleted.Location = new System.Drawing.Point(117, 0);
+            this.labelCompleted.Location = new System.Drawing.Point(95, 0);
             this.labelCompleted.Margin = new System.Windows.Forms.Padding(0);
             this.labelCompleted.Name = "labelCompleted";
-            this.labelCompleted.Size = new System.Drawing.Size(27, 17);
+            this.labelCompleted.Size = new System.Drawing.Size(29, 17);
             this.labelCompleted.TabIndex = 6;
             this.labelCompleted.Text = "100";
             this.labelCompleted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -563,10 +574,10 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(17, 0);
+            this.label4.Location = new System.Drawing.Point(14, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 17);
+            this.label4.Size = new System.Drawing.Size(81, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Completed";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -705,76 +716,6 @@
             this.labelUsername.TabIndex = 3;
             this.labelUsername.Text = "(User\'s) Profile";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_gray;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(14, 17);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_green;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(14, 17);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_red;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(14, 17);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_yellow;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_blue;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 17);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBoxUser
-            // 
-            this.pictureBoxUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxUser.Location = new System.Drawing.Point(0, 41);
-            this.pictureBoxUser.Name = "pictureBoxUser";
-            this.pictureBoxUser.Size = new System.Drawing.Size(260, 147);
-            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxUser.TabIndex = 4;
-            this.pictureBoxUser.TabStop = false;
-            // 
             // panelAnimeDetails
             // 
             this.panelAnimeDetails.AutoScroll = true;
@@ -788,6 +729,411 @@
             this.panelAnimeDetails.Name = "panelAnimeDetails";
             this.panelAnimeDetails.Size = new System.Drawing.Size(260, 850);
             this.panelAnimeDetails.TabIndex = 5;
+            // 
+            // panelInformation
+            // 
+            this.panelInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelInformation.Controls.Add(this.tableLayoutAnimeInfo);
+            this.panelInformation.Controls.Add(this.bunifuSeparator2);
+            this.panelInformation.Controls.Add(this.label17);
+            this.panelInformation.Location = new System.Drawing.Point(9, 576);
+            this.panelInformation.Name = "panelInformation";
+            this.panelInformation.Padding = new System.Windows.Forms.Padding(5, 10, 0, 5);
+            this.panelInformation.Size = new System.Drawing.Size(240, 209);
+            this.panelInformation.TabIndex = 9;
+            // 
+            // tableLayoutAnimeInfo
+            // 
+            this.tableLayoutAnimeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tableLayoutAnimeInfo.ColumnCount = 2;
+            this.tableLayoutAnimeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutAnimeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoGenre, 1, 5);
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoSource, 1, 4);
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoStudio, 1, 3);
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoSeason, 1, 2);
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoStatus, 1, 1);
+            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoEpisodes, 1, 0);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label27, 0, 5);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label25, 0, 4);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label23, 0, 3);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label21, 0, 2);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label19, 0, 1);
+            this.tableLayoutAnimeInfo.Controls.Add(this.label16, 0, 0);
+            this.tableLayoutAnimeInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutAnimeInfo.Location = new System.Drawing.Point(5, 43);
+            this.tableLayoutAnimeInfo.Name = "tableLayoutAnimeInfo";
+            this.tableLayoutAnimeInfo.RowCount = 6;
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutAnimeInfo.Size = new System.Drawing.Size(235, 157);
+            this.tableLayoutAnimeInfo.TabIndex = 10;
+            // 
+            // labelAnimeInfoGenre
+            // 
+            this.labelAnimeInfoGenre.AutoSize = true;
+            this.labelAnimeInfoGenre.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoGenre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoGenre.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoGenre.Location = new System.Drawing.Point(80, 125);
+            this.labelAnimeInfoGenre.Name = "labelAnimeInfoGenre";
+            this.labelAnimeInfoGenre.Size = new System.Drawing.Size(152, 32);
+            this.labelAnimeInfoGenre.TabIndex = 19;
+            this.labelAnimeInfoGenre.Text = "Action, Romance, Fantasy";
+            this.labelAnimeInfoGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAnimeInfoSource
+            // 
+            this.labelAnimeInfoSource.AutoSize = true;
+            this.labelAnimeInfoSource.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoSource.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoSource.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoSource.Location = new System.Drawing.Point(80, 100);
+            this.labelAnimeInfoSource.Name = "labelAnimeInfoSource";
+            this.labelAnimeInfoSource.Size = new System.Drawing.Size(152, 25);
+            this.labelAnimeInfoSource.TabIndex = 18;
+            this.labelAnimeInfoSource.Text = "Manga";
+            this.labelAnimeInfoSource.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAnimeInfoStudio
+            // 
+            this.labelAnimeInfoStudio.AutoSize = true;
+            this.labelAnimeInfoStudio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoStudio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoStudio.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoStudio.Location = new System.Drawing.Point(80, 75);
+            this.labelAnimeInfoStudio.Name = "labelAnimeInfoStudio";
+            this.labelAnimeInfoStudio.Size = new System.Drawing.Size(152, 25);
+            this.labelAnimeInfoStudio.TabIndex = 17;
+            this.labelAnimeInfoStudio.Text = "Studio Ghibli";
+            this.labelAnimeInfoStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAnimeInfoSeason
+            // 
+            this.labelAnimeInfoSeason.AutoSize = true;
+            this.labelAnimeInfoSeason.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoSeason.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoSeason.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoSeason.Location = new System.Drawing.Point(80, 50);
+            this.labelAnimeInfoSeason.Name = "labelAnimeInfoSeason";
+            this.labelAnimeInfoSeason.Size = new System.Drawing.Size(152, 25);
+            this.labelAnimeInfoSeason.TabIndex = 16;
+            this.labelAnimeInfoSeason.Text = "Winter 2020";
+            this.labelAnimeInfoSeason.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAnimeInfoStatus
+            // 
+            this.labelAnimeInfoStatus.AutoSize = true;
+            this.labelAnimeInfoStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoStatus.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoStatus.Location = new System.Drawing.Point(80, 25);
+            this.labelAnimeInfoStatus.Name = "labelAnimeInfoStatus";
+            this.labelAnimeInfoStatus.Size = new System.Drawing.Size(152, 25);
+            this.labelAnimeInfoStatus.TabIndex = 15;
+            this.labelAnimeInfoStatus.Text = "Finished";
+            this.labelAnimeInfoStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelAnimeInfoEpisodes
+            // 
+            this.labelAnimeInfoEpisodes.AutoSize = true;
+            this.labelAnimeInfoEpisodes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAnimeInfoEpisodes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAnimeInfoEpisodes.ForeColor = System.Drawing.Color.White;
+            this.labelAnimeInfoEpisodes.Location = new System.Drawing.Point(80, 0);
+            this.labelAnimeInfoEpisodes.Name = "labelAnimeInfoEpisodes";
+            this.labelAnimeInfoEpisodes.Size = new System.Drawing.Size(152, 25);
+            this.labelAnimeInfoEpisodes.TabIndex = 14;
+            this.labelAnimeInfoEpisodes.Text = "12";
+            this.labelAnimeInfoEpisodes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(3, 125);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(71, 32);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Genre:";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(3, 100);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(71, 25);
+            this.label25.TabIndex = 11;
+            this.label25.Text = "Source:";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(3, 75);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(71, 25);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "Studio:";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(3, 50);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(71, 25);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Season:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(3, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 25);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Status:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(3, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 25);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Episodes:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(5, 27);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(235, 16);
+            this.bunifuSeparator2.TabIndex = 11;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(5, 10);
+            this.label17.Name = "label17";
+            this.label17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label17.Size = new System.Drawing.Size(85, 17);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "Information";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelAnimeStatus
+            // 
+            this.panelAnimeStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panelAnimeStatus.Controls.Add(this.panelAnimeNotListed);
+            this.panelAnimeStatus.Controls.Add(this.tableLayoutPanelAnimeStatus);
+            this.panelAnimeStatus.Location = new System.Drawing.Point(9, 414);
+            this.panelAnimeStatus.Name = "panelAnimeStatus";
+            this.panelAnimeStatus.Padding = new System.Windows.Forms.Padding(0, 10, 0, 5);
+            this.panelAnimeStatus.Size = new System.Drawing.Size(242, 147);
+            this.panelAnimeStatus.TabIndex = 9;
+            // 
+            // tableLayoutPanelAnimeStatus
+            // 
+            this.tableLayoutPanelAnimeStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.tableLayoutPanelAnimeStatus.ColumnCount = 2;
+            this.tableLayoutPanelAnimeStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanelAnimeStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.bunifuDropdownYourScore, 1, 2);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.label14, 0, 1);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.bunifuDropdownStatus, 1, 0);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.flowLayoutPanel5, 1, 1);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.flowLayoutPanel4, 1, 3);
+            this.tableLayoutPanelAnimeStatus.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanelAnimeStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelAnimeStatus.Location = new System.Drawing.Point(0, 10);
+            this.tableLayoutPanelAnimeStatus.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.tableLayoutPanelAnimeStatus.Name = "tableLayoutPanelAnimeStatus";
+            this.tableLayoutPanelAnimeStatus.RowCount = 4;
+            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanelAnimeStatus.Size = new System.Drawing.Size(242, 132);
+            this.tableLayoutPanelAnimeStatus.TabIndex = 8;
+            // 
+            // bunifuDropdownYourScore
+            // 
+            this.bunifuDropdownYourScore.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdownYourScore.BorderRadius = 3;
+            this.bunifuDropdownYourScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuDropdownYourScore.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdownYourScore.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuDropdownYourScore.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdownYourScore.items = new string[] {
+        "Select",
+        "(10) Masterpiece",
+        "(9) Great",
+        "(8) Very Good",
+        "(7) Good",
+        "(6) Fine",
+        "(5) Average",
+        "(4) Bad",
+        "(3) Very Bad",
+        "(2) Horrible",
+        "(1) Appalling"};
+            this.bunifuDropdownYourScore.Location = new System.Drawing.Point(84, 66);
+            this.bunifuDropdownYourScore.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.bunifuDropdownYourScore.Name = "bunifuDropdownYourScore";
+            this.bunifuDropdownYourScore.NomalColor = System.Drawing.Color.White;
+            this.bunifuDropdownYourScore.onHoverColor = System.Drawing.Color.White;
+            this.bunifuDropdownYourScore.selectedIndex = 0;
+            this.bunifuDropdownYourScore.Size = new System.Drawing.Size(148, 33);
+            this.bunifuDropdownYourScore.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(3, 33);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 33);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Eps Seen:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 33);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Status:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // bunifuDropdownStatus
+            // 
+            this.bunifuDropdownStatus.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdownStatus.BorderRadius = 3;
+            this.bunifuDropdownStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bunifuDropdownStatus.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdownStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuDropdownStatus.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdownStatus.items = new string[] {
+        "Plan To Watch",
+        "Watching",
+        "Completed",
+        "On-Hold",
+        "Dropped"};
+            this.bunifuDropdownStatus.Location = new System.Drawing.Point(84, 0);
+            this.bunifuDropdownStatus.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.bunifuDropdownStatus.Name = "bunifuDropdownStatus";
+            this.bunifuDropdownStatus.NomalColor = System.Drawing.Color.White;
+            this.bunifuDropdownStatus.onHoverColor = System.Drawing.Color.White;
+            this.bunifuDropdownStatus.selectedIndex = -1;
+            this.bunifuDropdownStatus.Size = new System.Drawing.Size(148, 33);
+            this.bunifuDropdownStatus.TabIndex = 7;
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.textBoxEpsSeen);
+            this.flowLayoutPanel5.Controls.Add(this.label13);
+            this.flowLayoutPanel5.Controls.Add(this.labelNoOfeps);
+            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(84, 38);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(158, 28);
+            this.flowLayoutPanel5.TabIndex = 8;
+            // 
+            // textBoxEpsSeen
+            // 
+            this.textBoxEpsSeen.BorderColor = System.Drawing.Color.SeaGreen;
+            this.textBoxEpsSeen.Location = new System.Drawing.Point(0, 0);
+            this.textBoxEpsSeen.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxEpsSeen.Name = "textBoxEpsSeen";
+            this.textBoxEpsSeen.Size = new System.Drawing.Size(68, 20);
+            this.textBoxEpsSeen.TabIndex = 0;
+            this.textBoxEpsSeen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxEpsSeen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxEpsSeen_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(68, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 20);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "/";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelNoOfeps
+            // 
+            this.labelNoOfeps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelNoOfeps.AutoSize = true;
+            this.labelNoOfeps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNoOfeps.ForeColor = System.Drawing.Color.White;
+            this.labelNoOfeps.Location = new System.Drawing.Point(81, 0);
+            this.labelNoOfeps.Margin = new System.Windows.Forms.Padding(0);
+            this.labelNoOfeps.Name = "labelNoOfeps";
+            this.labelNoOfeps.Size = new System.Drawing.Size(19, 20);
+            this.labelNoOfeps.TabIndex = 2;
+            this.labelNoOfeps.Text = "12";
+            this.labelNoOfeps.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.bunifuButton1);
+            this.flowLayoutPanel4.Controls.Add(this.pictureBoxDeleteIcon);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(87, 102);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(152, 27);
+            this.flowLayoutPanel4.TabIndex = 10;
             // 
             // tableLayoutPanelAnimeStatistics
             // 
@@ -976,16 +1322,6 @@
             this.labelRanked.TabIndex = 1;
             this.labelRanked.Text = "#1466";
             // 
-            // pictureBoxAnimeInfoPoster
-            // 
-            this.pictureBoxAnimeInfoPoster.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxAnimeInfoPoster.Location = new System.Drawing.Point(0, 33);
-            this.pictureBoxAnimeInfoPoster.Name = "pictureBoxAnimeInfoPoster";
-            this.pictureBoxAnimeInfoPoster.Size = new System.Drawing.Size(260, 291);
-            this.pictureBoxAnimeInfoPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAnimeInfoPoster.TabIndex = 1;
-            this.pictureBoxAnimeInfoPoster.TabStop = false;
-            // 
             // labelAnimeInfoTitle
             // 
             this.labelAnimeInfoTitle.AutoEllipsis = false;
@@ -1004,185 +1340,24 @@
             this.labelAnimeInfoTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.labelAnimeInfoTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // tableLayoutPanelAnimeStatus
+            // bunifuElipse1
             // 
-            this.tableLayoutPanelAnimeStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.tableLayoutPanelAnimeStatus.ColumnCount = 2;
-            this.tableLayoutPanelAnimeStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanelAnimeStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.bunifuDropdownYourScore, 1, 2);
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.label14, 0, 1);
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.bunifuDropdownStatus, 1, 0);
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.flowLayoutPanel5, 1, 1);
-            this.tableLayoutPanelAnimeStatus.Controls.Add(this.flowLayoutPanel4, 1, 3);
-            this.tableLayoutPanelAnimeStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelAnimeStatus.Location = new System.Drawing.Point(0, 10);
-            this.tableLayoutPanelAnimeStatus.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.tableLayoutPanelAnimeStatus.Name = "tableLayoutPanelAnimeStatus";
-            this.tableLayoutPanelAnimeStatus.RowCount = 4;
-            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelAnimeStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanelAnimeStatus.Size = new System.Drawing.Size(242, 132);
-            this.tableLayoutPanelAnimeStatus.TabIndex = 8;
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.panelAnimeStatus;
             // 
-            // bunifuDropdownYourScore
+            // label1
             // 
-            this.bunifuDropdownYourScore.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdownYourScore.BorderRadius = 3;
-            this.bunifuDropdownYourScore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdownYourScore.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdownYourScore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuDropdownYourScore.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdownYourScore.items = new string[] {
-        "Select",
-        "(10) Masterpiece",
-        "(9) Great",
-        "(8) Very Good",
-        "(7) Good",
-        "(6) Fine",
-        "(5) Average",
-        "(4) Bad",
-        "(3) Very Bad",
-        "(2) Horrible",
-        "(1) Appalling"};
-            this.bunifuDropdownYourScore.Location = new System.Drawing.Point(85, 66);
-            this.bunifuDropdownYourScore.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.bunifuDropdownYourScore.Name = "bunifuDropdownYourScore";
-            this.bunifuDropdownYourScore.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdownYourScore.onHoverColor = System.Drawing.Color.White;
-            this.bunifuDropdownYourScore.selectedIndex = 0;
-            this.bunifuDropdownYourScore.Size = new System.Drawing.Size(150, 33);
-            this.bunifuDropdownYourScore.TabIndex = 9;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(5, 10);
-            this.label17.Name = "label17";
-            this.label17.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.label17.Size = new System.Drawing.Size(85, 17);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "Information";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 33);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 33);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Eps Seen:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 33);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Status:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // bunifuDropdownStatus
-            // 
-            this.bunifuDropdownStatus.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdownStatus.BorderRadius = 3;
-            this.bunifuDropdownStatus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdownStatus.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdownStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuDropdownStatus.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdownStatus.items = new string[] {
-        "Plan To Watch",
-        "Watching",
-        "Completed",
-        "On-Hold",
-        "Dropped"};
-            this.bunifuDropdownStatus.Location = new System.Drawing.Point(85, 0);
-            this.bunifuDropdownStatus.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-            this.bunifuDropdownStatus.Name = "bunifuDropdownStatus";
-            this.bunifuDropdownStatus.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdownStatus.onHoverColor = System.Drawing.Color.White;
-            this.bunifuDropdownStatus.selectedIndex = -1;
-            this.bunifuDropdownStatus.Size = new System.Drawing.Size(150, 33);
-            this.bunifuDropdownStatus.TabIndex = 7;
-            // 
-            // flowLayoutPanel5
-            // 
-            this.flowLayoutPanel5.Controls.Add(this.textBoxEpsSeen);
-            this.flowLayoutPanel5.Controls.Add(this.label13);
-            this.flowLayoutPanel5.Controls.Add(this.labelNoOfeps);
-            this.flowLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(85, 38);
-            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(160, 28);
-            this.flowLayoutPanel5.TabIndex = 8;
-            // 
-            // textBoxEpsSeen
-            // 
-            this.textBoxEpsSeen.BorderColor = System.Drawing.Color.SeaGreen;
-            this.textBoxEpsSeen.Location = new System.Drawing.Point(0, 0);
-            this.textBoxEpsSeen.Margin = new System.Windows.Forms.Padding(0);
-            this.textBoxEpsSeen.Name = "textBoxEpsSeen";
-            this.textBoxEpsSeen.Size = new System.Drawing.Size(68, 20);
-            this.textBoxEpsSeen.TabIndex = 0;
-            this.textBoxEpsSeen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(68, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 20);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "/";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelNoOfeps
-            // 
-            this.labelNoOfeps.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelNoOfeps.AutoSize = true;
-            this.labelNoOfeps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoOfeps.ForeColor = System.Drawing.Color.White;
-            this.labelNoOfeps.Location = new System.Drawing.Point(81, 0);
-            this.labelNoOfeps.Margin = new System.Windows.Forms.Padding(0);
-            this.labelNoOfeps.Name = "labelNoOfeps";
-            this.labelNoOfeps.Size = new System.Drawing.Size(19, 20);
-            this.labelNoOfeps.TabIndex = 2;
-            this.labelNoOfeps.Text = "12";
-            this.labelNoOfeps.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.bunifuButton1);
-            this.flowLayoutPanel4.Controls.Add(this.pictureBoxDeleteIcon);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(88, 102);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(154, 30);
-            this.flowLayoutPanel4.TabIndex = 10;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 33);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Your Score:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bunifuButton1
             // 
@@ -1198,11 +1373,11 @@
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges3;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges2;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -1223,267 +1398,249 @@
             this.bunifuButton1.IndicateFocus = false;
             this.bunifuButton1.Location = new System.Drawing.Point(3, 3);
             this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.BorderRadius = 3;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.BorderRadius = 3;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties6;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.BorderRadius = 3;
+            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.ForeColor = System.Drawing.Color.White;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.BorderRadius = 3;
+            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.bunifuButton1.OnPressedState = stateProperties4;
             this.bunifuButton1.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.bunifuButton1.Size = new System.Drawing.Size(82, 27);
             this.bunifuButton1.TabIndex = 10;
             this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton1.TextMarginLeft = 0;
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // pictureBoxDeleteIcon
             // 
+            this.pictureBoxDeleteIcon.Image = global::MyAnimeManager_1._0.Properties.Resources.delete_btn;
             this.pictureBoxDeleteIcon.Location = new System.Drawing.Point(98, 3);
             this.pictureBoxDeleteIcon.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.pictureBoxDeleteIcon.Name = "pictureBoxDeleteIcon";
-            this.pictureBoxDeleteIcon.Size = new System.Drawing.Size(24, 27);
+            this.pictureBoxDeleteIcon.Size = new System.Drawing.Size(18, 24);
             this.pictureBoxDeleteIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxDeleteIcon.TabIndex = 11;
             this.pictureBoxDeleteIcon.TabStop = false;
+            this.pictureBoxDeleteIcon.Click += new System.EventHandler(this.pictureBoxDeleteIcon_Click);
             // 
-            // panelAnimeStatus
+            // pictureBoxAnimeInfoPoster
             // 
-            this.panelAnimeStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panelAnimeStatus.Controls.Add(this.tableLayoutPanelAnimeStatus);
-            this.panelAnimeStatus.Location = new System.Drawing.Point(9, 414);
-            this.panelAnimeStatus.Name = "panelAnimeStatus";
-            this.panelAnimeStatus.Padding = new System.Windows.Forms.Padding(0, 10, 0, 5);
-            this.panelAnimeStatus.Size = new System.Drawing.Size(242, 147);
-            this.panelAnimeStatus.TabIndex = 9;
+            this.pictureBoxAnimeInfoPoster.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxAnimeInfoPoster.Location = new System.Drawing.Point(0, 33);
+            this.pictureBoxAnimeInfoPoster.Name = "pictureBoxAnimeInfoPoster";
+            this.pictureBoxAnimeInfoPoster.Size = new System.Drawing.Size(260, 291);
+            this.pictureBoxAnimeInfoPoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAnimeInfoPoster.TabIndex = 1;
+            this.pictureBoxAnimeInfoPoster.TabStop = false;
             // 
-            // tableLayoutAnimeInfo
+            // pictureBox5
             // 
-            this.tableLayoutAnimeInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.tableLayoutAnimeInfo.ColumnCount = 2;
-            this.tableLayoutAnimeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutAnimeInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoGenre, 1, 5);
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoSource, 1, 4);
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoStudio, 1, 3);
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoSeason, 1, 2);
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoStatus, 1, 1);
-            this.tableLayoutAnimeInfo.Controls.Add(this.labelAnimeInfoEpisodes, 1, 0);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label27, 0, 5);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label25, 0, 4);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label23, 0, 3);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label21, 0, 2);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label19, 0, 1);
-            this.tableLayoutAnimeInfo.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutAnimeInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutAnimeInfo.Location = new System.Drawing.Point(5, 43);
-            this.tableLayoutAnimeInfo.Name = "tableLayoutAnimeInfo";
-            this.tableLayoutAnimeInfo.RowCount = 6;
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutAnimeInfo.Size = new System.Drawing.Size(235, 157);
-            this.tableLayoutAnimeInfo.TabIndex = 10;
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_gray;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(14, 17);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
             // 
-            // labelAnimeInfoGenre
+            // pictureBox6
             // 
-            this.labelAnimeInfoGenre.AutoSize = true;
-            this.labelAnimeInfoGenre.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoGenre.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoGenre.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoGenre.Location = new System.Drawing.Point(75, 136);
-            this.labelAnimeInfoGenre.Name = "labelAnimeInfoGenre";
-            this.labelAnimeInfoGenre.Size = new System.Drawing.Size(162, 20);
-            this.labelAnimeInfoGenre.TabIndex = 19;
-            this.labelAnimeInfoGenre.Text = "Action, Romance, Fantasy";
-            this.labelAnimeInfoGenre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_green;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(14, 17);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
             // 
-            // labelAnimeInfoSource
+            // pictureBox4
             // 
-            this.labelAnimeInfoSource.AutoSize = true;
-            this.labelAnimeInfoSource.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoSource.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoSource.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoSource.Location = new System.Drawing.Point(75, 116);
-            this.labelAnimeInfoSource.Name = "labelAnimeInfoSource";
-            this.labelAnimeInfoSource.Size = new System.Drawing.Size(162, 20);
-            this.labelAnimeInfoSource.TabIndex = 18;
-            this.labelAnimeInfoSource.Text = "Manga";
-            this.labelAnimeInfoSource.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_red;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(14, 17);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
             // 
-            // labelAnimeInfoStudio
+            // pictureBox3
             // 
-            this.labelAnimeInfoStudio.AutoSize = true;
-            this.labelAnimeInfoStudio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoStudio.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoStudio.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoStudio.Location = new System.Drawing.Point(75, 96);
-            this.labelAnimeInfoStudio.Name = "labelAnimeInfoStudio";
-            this.labelAnimeInfoStudio.Size = new System.Drawing.Size(162, 20);
-            this.labelAnimeInfoStudio.TabIndex = 17;
-            this.labelAnimeInfoStudio.Text = "Studio Ghibli";
-            this.labelAnimeInfoStudio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_yellow;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(14, 17);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
-            // labelAnimeInfoSeason
+            // pictureBox2
             // 
-            this.labelAnimeInfoSeason.AutoSize = true;
-            this.labelAnimeInfoSeason.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoSeason.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoSeason.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoSeason.Location = new System.Drawing.Point(75, 76);
-            this.labelAnimeInfoSeason.Name = "labelAnimeInfoSeason";
-            this.labelAnimeInfoSeason.Size = new System.Drawing.Size(162, 20);
-            this.labelAnimeInfoSeason.TabIndex = 16;
-            this.labelAnimeInfoSeason.Text = "Winter 2020";
-            this.labelAnimeInfoSeason.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::MyAnimeManager_1._0.Properties.Resources.circle_blue;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(14, 17);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
-            // labelAnimeInfoStatus
+            // pictureBoxUser
             // 
-            this.labelAnimeInfoStatus.AutoSize = true;
-            this.labelAnimeInfoStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoStatus.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoStatus.Location = new System.Drawing.Point(75, 38);
-            this.labelAnimeInfoStatus.Name = "labelAnimeInfoStatus";
-            this.labelAnimeInfoStatus.Size = new System.Drawing.Size(162, 38);
-            this.labelAnimeInfoStatus.TabIndex = 15;
-            this.labelAnimeInfoStatus.Text = "Finished";
-            this.labelAnimeInfoStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.pictureBoxUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxUser.Location = new System.Drawing.Point(0, 41);
+            this.pictureBoxUser.Name = "pictureBoxUser";
+            this.pictureBoxUser.Size = new System.Drawing.Size(260, 147);
+            this.pictureBoxUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUser.TabIndex = 4;
+            this.pictureBoxUser.TabStop = false;
             // 
-            // labelAnimeInfoEpisodes
+            // panelProfileLoading
             // 
-            this.labelAnimeInfoEpisodes.AutoSize = true;
-            this.labelAnimeInfoEpisodes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelAnimeInfoEpisodes.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnimeInfoEpisodes.ForeColor = System.Drawing.Color.White;
-            this.labelAnimeInfoEpisodes.Location = new System.Drawing.Point(75, 0);
-            this.labelAnimeInfoEpisodes.Name = "labelAnimeInfoEpisodes";
-            this.labelAnimeInfoEpisodes.Size = new System.Drawing.Size(162, 38);
-            this.labelAnimeInfoEpisodes.TabIndex = 14;
-            this.labelAnimeInfoEpisodes.Text = "12";
-            this.labelAnimeInfoEpisodes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelProfileLoading.Controls.Add(this.bunifuCircleProgress1);
+            this.panelProfileLoading.Controls.Add(this.label15);
+            this.panelProfileLoading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelProfileLoading.Location = new System.Drawing.Point(0, 0);
+            this.panelProfileLoading.Name = "panelProfileLoading";
+            this.panelProfileLoading.Size = new System.Drawing.Size(260, 850);
+            this.panelProfileLoading.TabIndex = 10;
             // 
-            // label27
+            // label15
             // 
-            this.label27.AutoSize = true;
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(3, 136);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(66, 20);
-            this.label27.TabIndex = 13;
-            this.label27.Text = "Genre:";
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(20, 395);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(221, 25);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Processing... Please Wait";
             // 
-            // label25
+            // bunifuCircleProgress1
             // 
-            this.label25.AutoSize = true;
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(3, 116);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(66, 20);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "Source:";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuCircleProgress1.Animated = true;
+            this.bunifuCircleProgress1.AnimationInterval = 7;
+            this.bunifuCircleProgress1.AnimationSpeed = 1;
+            this.bunifuCircleProgress1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCircleProgress1.CircleMargin = 10;
+            this.bunifuCircleProgress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this.bunifuCircleProgress1.ForeColor = System.Drawing.Color.Transparent;
+            this.bunifuCircleProgress1.IsPercentage = true;
+            this.bunifuCircleProgress1.LineProgressThickness = 8;
+            this.bunifuCircleProgress1.LineThickness = 5;
+            this.bunifuCircleProgress1.Location = new System.Drawing.Point(79, 287);
+            this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
+            this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCircleProgress1.ProgressColor = System.Drawing.Color.Purple;
+            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.bunifuCircleProgress1.Size = new System.Drawing.Size(88, 88);
+            this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -35, 0, 0);
+            this.bunifuCircleProgress1.SubScriptText = "";
+            this.bunifuCircleProgress1.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.bunifuCircleProgress1.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
+            this.bunifuCircleProgress1.SuperScriptText = "";
+            this.bunifuCircleProgress1.TabIndex = 16;
+            this.bunifuCircleProgress1.Text = "30";
+            this.bunifuCircleProgress1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.bunifuCircleProgress1.Value = 30;
             // 
-            // label23
+            // panelAnimeNotListed
             // 
-            this.label23.AutoSize = true;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(3, 96);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(66, 20);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Studio:";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panelAnimeNotListed.Controls.Add(this.bunifuButtonAddToList);
+            this.panelAnimeNotListed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAnimeNotListed.Location = new System.Drawing.Point(0, 10);
+            this.panelAnimeNotListed.Name = "panelAnimeNotListed";
+            this.panelAnimeNotListed.Size = new System.Drawing.Size(242, 132);
+            this.panelAnimeNotListed.TabIndex = 10;
             // 
-            // label21
+            // bunifuButtonAddToList
             // 
-            this.label21.AutoSize = true;
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(3, 76);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(66, 20);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "Season:";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(3, 38);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 38);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Status:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(66, 38);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Episodes:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panelInformation
-            // 
-            this.panelInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panelInformation.Controls.Add(this.tableLayoutAnimeInfo);
-            this.panelInformation.Controls.Add(this.bunifuSeparator2);
-            this.panelInformation.Controls.Add(this.label17);
-            this.panelInformation.Location = new System.Drawing.Point(9, 576);
-            this.panelInformation.Name = "panelInformation";
-            this.panelInformation.Padding = new System.Windows.Forms.Padding(5, 10, 0, 5);
-            this.panelInformation.Size = new System.Drawing.Size(240, 209);
-            this.panelInformation.TabIndex = 9;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(5, 27);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(235, 16);
-            this.bunifuSeparator2.TabIndex = 11;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this.panelAnimeStatus;
+            this.bunifuButtonAddToList.AllowToggling = false;
+            this.bunifuButtonAddToList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuButtonAddToList.AnimationSpeed = 200;
+            this.bunifuButtonAddToList.AutoGenerateColors = false;
+            this.bunifuButtonAddToList.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButtonAddToList.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(146)))));
+            this.bunifuButtonAddToList.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButtonAddToList.BackgroundImage")));
+            this.bunifuButtonAddToList.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.bunifuButtonAddToList.ButtonText = "Add to My List";
+            this.bunifuButtonAddToList.ButtonTextMarginLeft = 0;
+            this.bunifuButtonAddToList.ColorContrastOnClick = 45;
+            this.bunifuButtonAddToList.ColorContrastOnHover = 45;
+            this.bunifuButtonAddToList.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButtonAddToList.CustomizableEdges = borderEdges1;
+            this.bunifuButtonAddToList.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bunifuButtonAddToList.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuButtonAddToList.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bunifuButtonAddToList.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bunifuButtonAddToList.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.bunifuButtonAddToList.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuButtonAddToList.ForeColor = System.Drawing.Color.White;
+            this.bunifuButtonAddToList.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButtonAddToList.IconMarginLeft = 11;
+            this.bunifuButtonAddToList.IconPadding = 10;
+            this.bunifuButtonAddToList.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuButtonAddToList.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(146)))));
+            this.bunifuButtonAddToList.IdleBorderRadius = 3;
+            this.bunifuButtonAddToList.IdleBorderThickness = 1;
+            this.bunifuButtonAddToList.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(146)))));
+            this.bunifuButtonAddToList.IdleIconLeftImage = null;
+            this.bunifuButtonAddToList.IdleIconRightImage = null;
+            this.bunifuButtonAddToList.IndicateFocus = false;
+            this.bunifuButtonAddToList.Location = new System.Drawing.Point(7, 48);
+            this.bunifuButtonAddToList.Margin = new System.Windows.Forms.Padding(10, 30, 3, 3);
+            this.bunifuButtonAddToList.Name = "bunifuButtonAddToList";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties1.BorderRadius = 3;
+            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties1.ForeColor = System.Drawing.Color.White;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButtonAddToList.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.BorderRadius = 3;
+            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties2.ForeColor = System.Drawing.Color.White;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.bunifuButtonAddToList.OnPressedState = stateProperties2;
+            this.bunifuButtonAddToList.Size = new System.Drawing.Size(225, 30);
+            this.bunifuButtonAddToList.TabIndex = 1;
+            this.bunifuButtonAddToList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButtonAddToList.TextMarginLeft = 0;
+            this.bunifuButtonAddToList.UseDefaultRadiusAndThickness = true;
+            this.bunifuButtonAddToList.Click += new System.EventHandler(this.bunifuButtonAddToList_Click);
             // 
             // ProfileView
             // 
@@ -1491,6 +1648,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(79)))));
             this.Controls.Add(this.panelAnimeDetails);
+            this.Controls.Add(this.panelProfileLoading);
             this.Controls.Add(this.panelUserProfile);
             this.Controls.Add(this.panelLeftLogin);
             this.Name = "ProfileView";
@@ -1520,14 +1678,18 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.panelAnimeProgress.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.panelAnimeDetails.ResumeLayout(false);
             this.panelAnimeDetails.PerformLayout();
+            this.panelInformation.ResumeLayout(false);
+            this.panelInformation.PerformLayout();
+            this.tableLayoutAnimeInfo.ResumeLayout(false);
+            this.tableLayoutAnimeInfo.PerformLayout();
+            this.panelAnimeStatus.ResumeLayout(false);
+            this.tableLayoutPanelAnimeStatus.ResumeLayout(false);
+            this.tableLayoutPanelAnimeStatus.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
+            this.flowLayoutPanel5.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanelAnimeStatistics.ResumeLayout(false);
             this.panelAnimeRating.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1537,18 +1699,17 @@
             this.flowLayoutPanel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnimeInfoPoster)).EndInit();
-            this.tableLayoutPanelAnimeStatus.ResumeLayout(false);
-            this.tableLayoutPanelAnimeStatus.PerformLayout();
-            this.flowLayoutPanel5.ResumeLayout(false);
-            this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDeleteIcon)).EndInit();
-            this.panelAnimeStatus.ResumeLayout(false);
-            this.tableLayoutAnimeInfo.ResumeLayout(false);
-            this.tableLayoutAnimeInfo.PerformLayout();
-            this.panelInformation.ResumeLayout(false);
-            this.panelInformation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnimeInfoPoster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
+            this.panelProfileLoading.ResumeLayout(false);
+            this.panelProfileLoading.PerformLayout();
+            this.panelAnimeNotListed.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1648,5 +1809,11 @@
         private System.Windows.Forms.Panel panelInformation;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelProfileLoading;
+        private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panelAnimeNotListed;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButtonAddToList;
     }
 }

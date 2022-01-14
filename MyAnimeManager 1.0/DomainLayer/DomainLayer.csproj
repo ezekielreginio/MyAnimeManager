@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\AnimeStatus.cs" />
     <Compile Include="Models\DirectoryModel.cs" />
     <Compile Include="Models\IDirectoryModel.cs" />
     <Compile Include="Models\MALToken.cs" />

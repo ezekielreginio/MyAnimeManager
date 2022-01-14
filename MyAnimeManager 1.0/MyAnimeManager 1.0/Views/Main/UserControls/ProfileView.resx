@@ -117,10 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="labelAnimeInfoTitle.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: White; text-align: left; }</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuButtonAddToList.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOEAAAAeCAYAAADad3m2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADSSURBVHhe7dyxTQNRFETRXwqd4DU5rQHeMohJKYUGiFwB
+        GGS9AE06QHCudJKdl/50l6T/0O3DzdpOz+t4+gB+weH08v3upu3xdR2f8jFQsr9dX+CleADUTWkE+qY0
+        An1TGoG+KY1A35RGoG9KI9A3pRHom9II9E1pBPqmNAJ9UxqBvimNQN+URqBvSiPQN6UR6JvSCPRNaQT6
+        pjQCfVMagb4pjUDflEagb0oj0DelEeibvn5Cmg6ApvP1BV662w+XD+8/DoCe89r2++sLlPR3rfUJ2jp8
+        c30JqOEAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAFIAAAAbCAYAAADve9g/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -129,6 +136,9 @@
         IqfciJxyI3LKjcgpNyKn3IicciNyyo3IKTcip9yInHIjcsqNyCk3IqfciJxyI3LKjcgpNyKnXn/C3AES
         c3vFpd3ULR/uHwdYN1c/7dsr0u9VPQFAUDy1OKe/uQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="labelAnimeInfoTitle.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: White; text-align: left; }</value>
   </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
