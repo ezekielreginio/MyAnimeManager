@@ -64,7 +64,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\Repositories\IPlayerCacheRepository.cs" />
     <Compile Include="DataAccess\Repositories\IRestfulRepository.cs" />
+    <Compile Include="DataAccess\Repositories\PlayerCacheRepository.cs" />
     <Compile Include="DataAccess\Repositories\RestfulRepository.cs" />
     <Compile Include="DataAccess\Repositories\Specific\Directory\DirectoryRepository.cs" />
     <Compile Include="DataAccess\Repositories\Specific\Directory\IDirectoryRepository.cs" />

@@ -115,6 +115,7 @@
     <Compile Include="Views\Main\UserControls\IDirectoryView.cs" />
     <Compile Include="Views\Main\UserControls\ILoginView.cs" />
     <Compile Include="Views\Main\UserControls\IProfileView.cs" />
+    <Compile Include="Views\Main\UserControls\IVideoPlayerView.cs" />
     <Compile Include="Views\Main\UserControls\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +142,12 @@
     </Compile>
     <Compile Include="Views\Main\UserControls\ProfileView.Designer.cs">
       <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main\UserControls\VideoPlayerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Main\UserControls\VideoPlayerView.Designer.cs">
+      <DependentUpon>VideoPlayerView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserControls\FolderItem.cs">
       <SubType>UserControl</SubType>
@@ -173,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="Views\Main\UserControls\ProfileView.resx">
       <DependentUpon>ProfileView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\UserControls\VideoPlayerView.resx">
+      <DependentUpon>VideoPlayerView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserControls\FolderItem.resx">
       <DependentUpon>FolderItem.cs</DependentUpon>
@@ -235,6 +245,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete-btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

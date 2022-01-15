@@ -56,3 +56,9 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.Main.UserControls.ProfileView.resources
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\Interop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\Interop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\PresentationLayer.csproj.ResolveComReference.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\MyAnimeManager 1.0\obj\Debug\MyAnimeManager_1._0.Views.Main.UserControls.VideoPlayerView.resources

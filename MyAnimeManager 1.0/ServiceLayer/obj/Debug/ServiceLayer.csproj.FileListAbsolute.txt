@@ -16,3 +16,5 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\Debug\InfrastructureLayer.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\Debug\InfrastructureLayer.pdb
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\Debug\InfrastructureLayer.dll.config
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer\bin\Debug\Interop.WMPLib.dll

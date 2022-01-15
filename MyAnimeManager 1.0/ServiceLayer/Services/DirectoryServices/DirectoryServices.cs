@@ -40,7 +40,6 @@ namespace ServiceLayer.Services.DirectoryServices
             try
             {
                 DirectoryModel model = _directoryRepository.Get();
-                Console.WriteLine("Current Directory: " +model.DirectoryPath);
                 return model;
             }
             catch(DataAccessException e)

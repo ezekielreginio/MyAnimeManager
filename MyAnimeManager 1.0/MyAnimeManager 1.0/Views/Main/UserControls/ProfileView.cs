@@ -23,6 +23,8 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
 
         public int SelectedAnimeID;
 
+        public string CurrentStatus;
+
         public ProfileView()
         {
             InitializeComponent();
@@ -62,14 +64,14 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
         }
         public string GetCurrentStatus()
         {
-            return AnimeStatusConstants.getKey(bunifuDropdownStatus.selectedIndex);
+            return CurrentStatus;
         }
 
         public void SetAnimeDetails(dynamic animeDetails)
         {
             labelAnimeInfoTitle.Text = animeDetails["title"];
             pictureBoxAnimeInfoPoster.ImageLocation = animeDetails["main_picture"]["medium"];
-
+            
             if (animeDetails["mean"] == null)
                 labelAnimeRating.Text = "N/A";
             else
@@ -81,6 +83,7 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
 
             if (animeDetails["my_list_status"] != null)
             {
+                CurrentStatus = (String)animeDetails["my_list_status"]["status"];
                 //panelContainerAnimeStatus.BringToFront();
                 textBoxEpsSeen.Text = animeDetails["my_list_status"]["num_episodes_watched"];
                 labelNoOfeps.Text = animeDetails["num_episodes"];
@@ -95,6 +98,7 @@ namespace MyAnimeManager_1._0.Views.Main.UserControls
             }
             else
             {
+                CurrentStatus = null;
                 panelAnimeNotListed.BringToFront();
             }
 

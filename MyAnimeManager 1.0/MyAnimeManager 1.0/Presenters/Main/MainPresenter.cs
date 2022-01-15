@@ -1,55 +1,78 @@
-﻿using DomainLayer.Models;
+﻿using CommonComponents;
+using DomainLayer.Models;
 using MyAnimeManager_1._0.Forms;
 using MyAnimeManager_1._0.Presenters.Main.Forms;
 using MyAnimeManager_1._0.Views.Main.Forms;
 using MyAnimeManager_1._0.Views.Main.UserControls;
 using ServiceLayer.Services;
+using ServiceLayer.Services.DirectoryServices;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace MyAnimeManager_1._0.Presenters
 {
     public class MainPresenter : IMainPresenter
     {
         //Attributes
+        //Main View Events
+        public event EventHandler ViewProfileClickEventRaised;
+        public event EventHandler ViewPlayerClickEventRaised;
+        public event EventHandler FormClosedEventRaised;
+        //Left Panel Events
         public event EventHandler ConnectToMALClickEventRaised;
         public event EventHandler AddToListClickEventRaised;
         public event EventHandler UpdateAnimeClickEventRaised;
         public event EventHandler DeleteAnimeClickEventRaised;
         public event EventHandler AuthenticationCodeObtainedEventRaised;
         public event EventHandler ProfileLoadedEventRaised;
+        //DirectoryView Events
+        public event EventHandler PlayAnimeClickEventRaised;
+        //VidePlayer View Events
+        public event EventHandler PlaylistSelectedChangedEventRaised;
+        public event EventHandler PlayerItemChangedEventRaised;
 
-        IMainView _mainView;
-        IDirectoryView _directoryView;
-        ILoginView _loginView;
-        IProfileView _profileView;
+        private IMainView _mainView;
+        private IDirectoryView _directoryView;
+        private ILoginView _loginView;
+        private IProfileView _profileView;
+        private IVideoPlayerView _videoPlayerView;
 
-        IDirectoryPresenter _directoryPresenter;
+        private IDirectoryPresenter _directoryPresenter;
 
-        IRestfulService _restfulService;
+        private IRestfulService _restfulService;
+        private IDirectoryServices _directoryServices;
+        private IPlayerCacheServices _playerCacheServices;
 
         //Constructor
         public MainPresenter(IMainView mainView, 
                              IDirectoryView directoryView,
                              ILoginView loginView,
                              IProfileView profileView,
+                             IVideoPlayerView videoPlayerView,
                              IDirectoryPresenter directoryPresenter,
-                             IRestfulService restfulService)
+                             IRestfulService restfulService,
+                             IDirectoryServices directoryServices,
+                             IPlayerCacheServices playerCacheServices)
         {
             //Views
             _mainView = mainView;
             _directoryView = directoryView;
             _loginView = loginView;
             _profileView = profileView;
+            _videoPlayerView = videoPlayerView;
             //Presenters
             _directoryPresenter = directoryPresenter;
             //Services
             _restfulService = restfulService;
-
+            _directoryServices = directoryServices;
+            _playerCacheServices = playerCacheServices;
             //Initialize Mainform Panels
             _mainView.OpenChildForm(_directoryView.GetDirectoryForm(), null);
             _mainView.OpenLeftPanel(_profileView.GetProfileView());
@@ -65,6 +88,14 @@ namespace MyAnimeManager_1._0.Presenters
         //Private Methods
         private void SubscribeToEventsSetup()
         {
+            _mainView.ViewProfileClickEventRaised += new EventHandler(OnViewProfileClickEventRaised);
+            _mainView.ViewPlayerClickEventRaised += new EventHandler(OnViewPlayerClickEventRaised);
+            _mainView.PlayAnimeClickEventRaised += new EventHandler(OnPlayAnimeClickEventRaised);
+            _mainView.FormClosedEventRaised += new EventHandler(OnFormClosedEventRaised);
+
+            _videoPlayerView.PlaylistSelectedChangedEventRaised += new EventHandler(OnPlaylistSelectedChangedEventRaised);
+            _videoPlayerView.PlayerItemChangedEventRaised += new EventHandler(OnPlayerItemChangedEventRaised);
+
             _profileView.ConnectToMALClickEventRaised += new EventHandler(OnConnectToMALClickEventRaised);
             _profileView.AddToListClickEventRaised += new EventHandler(OnAddToListClickEventRaised);
             _profileView.UpdateAnimeClickEventRaised += new EventHandler(OnUpdateAnimeClickEventRaised);
@@ -72,9 +103,126 @@ namespace MyAnimeManager_1._0.Presenters
             _profileView.ProfileLoadedEventRaised += new EventHandler(OnProfileLoadedEventRaised);
             _loginView.AuthenticationCodeObtainedEventRaised += new EventHandler(OnAuthenticationCodeObtainedEventRaised);
         }
+        private async Task<bool> LoadProfile()
+        {
+            dynamic userData = await _restfulService.GetAnimeStatisticsUsingToken();
+            _mainView.ShowLeftPanel();
+            if (userData != null)
+            {
+                _profileView.SetUserData(userData);
+                _profileView.ShowProfilePanel();
+            }
+            else
+                _profileView.ShowLoginPanel();
+            return true;
+        }
+        private void playIndex()
+        {
+            try
+            {
+                int position = _videoPlayerView.GetPlaylistBox().SelectedIndex;
+                _videoPlayerView.GetPlayer().Ctlcontrols.stop();
+                _videoPlayerView.GetPlayer().Ctlcontrols.currentItem = _videoPlayerView.GetPlayer().currentPlaylist.get_Item(position);
+                _videoPlayerView.GetPlayer().Ctlcontrols.play();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        private void playAnime()
+        {
+            String title = _directoryPresenter.GetCurrentlySelected().GetTitle();
+            String directory = _directoryServices.Get().DirectoryPath + @"\" + title;
+            int animeID = _profileView.GetSelectedAnimeID();
+            List<MediaFile> episodes = new List<MediaFile>();
+            IWMPPlaylistArray plCollection = _videoPlayerView.GetPlayer().playlistCollection.getByName("Playlist 1");
+            
+            //Save Previous Player Cache
+            if(animeID != -1)
+            {
+                PlayerCacheModel playerCacheModel = new PlayerCacheModel(_videoPlayerView.GetCurrentAnimeID(), _videoPlayerView.GetPlaylistBox().SelectedIndex, _videoPlayerView.GetPlayer().Ctlcontrols.currentPositionString);
+                _playerCacheServices.UpdatePlayerCache(playerCacheModel);
+            }
+            //Reset Playlist
+            _videoPlayerView.GetPlaylistBox().SelectedIndex = -1;
+            if (plCollection.count > 0)
+            {
+                IWMPPlaylist pl = plCollection.Item(0);
+                _videoPlayerView.GetPlayer().playlistCollection.remove(pl);
+            }
 
+            _videoPlayerView.SetCurrentAnimeID(animeID);
+            _videoPlayerView.SetCurrentStatus(_profileView.GetCurrentStatus());
+            
+
+            IWMPPlaylist pList = _videoPlayerView.GetPlayer().playlistCollection.newPlaylist("Playlist 1");
+            foreach (string file in Directory.GetFiles(directory, "*.*", SearchOption.AllDirectories).OrderBy(fi => fi).Where(s => s.EndsWith(".mp4") || s.EndsWith(".mkv")))
+            {
+                FileInfo fileInfo = new FileInfo(file);
+                IWMPMedia media = _videoPlayerView.GetPlayer().newMedia(fileInfo.FullName);
+                episodes.Add(new MediaFile() { FileName = Path.GetFileNameWithoutExtension(fileInfo.Name), Path = fileInfo.FullName });
+                pList.appendItem(media);
+            }
+            _videoPlayerView.GetPlaylistBox().DataSource = episodes;
+            _videoPlayerView.GetPlaylistBox().DisplayMember = "FileName";
+            _videoPlayerView.GetPlayer().currentPlaylist = pList;
+
+            PlayerCacheModel cacheModel = _playerCacheServices.GetPlayerCache(animeID);
+            if(cacheModel == null)
+                _videoPlayerView.GetPlayer().Ctlcontrols.play();
+            else
+            {
+                string duration = "00:00";
+                if (!String.IsNullOrEmpty(cacheModel.duration))
+                    duration = cacheModel.duration;
+                _videoPlayerView.GetPlaylistBox().SelectedIndex = cacheModel.episode;
+                _videoPlayerView.GetPlayer().Ctlcontrols.currentPosition = StringExtensions.GetDuration(duration);
+                playIndex();
+            }
+        }
 
         //Event Handlers
+        private async void OnViewProfileClickEventRaised(object sender, EventArgs e)
+        {
+            await LoadProfile();
+            _mainView.OpenDirectory();
+        }
+        private void OnViewPlayerClickEventRaised(object sender, EventArgs e)
+        {
+            _mainView.HideLeftPanel();
+            _mainView.OpenPlayerControl(_videoPlayerView.GetVideoPlayer());
+        }
+        private void OnPlayAnimeClickEventRaised(object sender, EventArgs e)
+        {
+            _mainView.HideLeftPanel();
+            _mainView.OpenPlayerControl(_videoPlayerView.GetVideoPlayer());
+            playAnime();
+        }
+        private void OnFormClosedEventRaised(object sender, EventArgs e)
+        {
+            PlayerCacheModel playerCacheModel = new PlayerCacheModel(_videoPlayerView.GetCurrentAnimeID(), _videoPlayerView.GetPlaylistBox().SelectedIndex, _videoPlayerView.GetPlayer().Ctlcontrols.currentPositionString);
+            _playerCacheServices.UpdatePlayerCache(playerCacheModel);
+        }
+        private void OnPlaylistSelectedChangedEventRaised(object sender, EventArgs e)
+        {
+            playIndex();
+            AnimeStatus animeStatus = new AnimeStatus(_videoPlayerView.GetCurrentAnimeID(), -1, "watching", _videoPlayerView.GetPlaylistBox().SelectedIndex + 1);
+            if (_videoPlayerView.GetCurrentAnimeID() > 0 && (_videoPlayerView.GetCurrentStatus() == null || !_videoPlayerView.GetCurrentStatus().Equals("completed")))
+                _restfulService.UpdateAnimeStatus(animeStatus);
+        }
+        private void OnPlayerItemChangedEventRaised(object sender, EventArgs e)
+        {
+            int startIndex = _videoPlayerView.GetPlayer().currentMedia.name.ToLower().IndexOf("ep");
+            if(startIndex < 0)
+                startIndex = _videoPlayerView.GetPlayer().currentMedia.name.ToLower().IndexOf("e");
+            int ep = Int32.Parse(Regex.Match(_videoPlayerView.GetPlayer().currentMedia.name.Substring(startIndex), @"\d+").Value);
+            _videoPlayerView.GetPlaylistBox().SelectedIndex = ep - 1;
+            AnimeStatus animeStatus = new AnimeStatus(_videoPlayerView.GetCurrentAnimeID(), -1, "watching", _videoPlayerView.GetPlaylistBox().SelectedIndex+1);
+            if(_videoPlayerView.GetCurrentAnimeID() > 0 && (_videoPlayerView.GetCurrentStatus() == null || !_videoPlayerView.GetCurrentStatus().Equals("completed")))
+                _restfulService.UpdateAnimeStatus(animeStatus);
+        }
+
         private void OnConnectToMALClickEventRaised(object sender, EventArgs e)
         {
             Console.WriteLine("Clicked");
@@ -132,17 +280,7 @@ namespace MyAnimeManager_1._0.Presenters
         }
         private async void OnProfileLoadedEventRaised(object sender, EventArgs e)
         {
-            dynamic userData = await _restfulService.GetAnimeStatisticsUsingToken();
-            if(userData != null)
-            {
-                _profileView.SetUserData(userData);
-                _profileView.ShowProfilePanel();
-            }
-            else
-            {
-                _profileView.ShowLoginPanel();
-
-            }
+            await LoadProfile();
         }
     }
 }

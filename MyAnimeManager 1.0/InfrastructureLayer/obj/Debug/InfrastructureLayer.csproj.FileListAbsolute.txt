@@ -20,3 +20,5 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLay
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLayer\bin\Debug\System.Data.SQLite.xml
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLayer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLayer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLayer\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\InfrastructureLayer\bin\Debug\Interop.WMPLib.dll

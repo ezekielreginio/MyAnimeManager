@@ -15,15 +15,17 @@ namespace MyAnimeManager_1._0.Views.UserControls
     {
         public event EventHandler FolderClickEventRaised;
         private Action<string, int> _callback;
+        private Action<string, int> _callbackOnFolderRightClick;
         private int _index = -1;
         public FolderItem()
         {
             InitializeComponent();
         }
-        public FolderItem(Action<string, int> callback, int index)
+        public FolderItem(Action<string, int> callback, Action<string, int> callbackOnFolderRightClick, int index)
         {
             InitializeComponent();
             _callback = callback;
+            _callbackOnFolderRightClick = callbackOnFolderRightClick;
             _index = index;
         }
         public FolderItem(String iconDirectory, String folderName)
@@ -42,6 +44,26 @@ namespace MyAnimeManager_1._0.Views.UserControls
         public UserControl GetFolderItem()
         {
             return this;
+        }
+
+        public int GetIndex()
+        {
+            return _index;
+        }
+
+        public String GetTitle()
+        {
+            return labelFolderName.Text;
+        }
+
+        public void HideItem()
+        {
+            this.Hide();
+        }
+
+        public void ShowItem()
+        {
+            this.Show();
         }
 
         public UserControl SetFolderIcon(String iconDirectory, String folderName)
@@ -81,7 +103,10 @@ namespace MyAnimeManager_1._0.Views.UserControls
             {
                 _callback(labelFolderName.Text, _index);
             }
-            
+            else if (e.Button == MouseButtons.Right)
+            {
+                _callbackOnFolderRightClick(labelFolderName.Text, _index);
+            }
         }
     }
 }

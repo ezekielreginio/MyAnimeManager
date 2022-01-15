@@ -52,6 +52,8 @@
     <Compile Include="Models\DirectoryModel.cs" />
     <Compile Include="Models\IDirectoryModel.cs" />
     <Compile Include="Models\MALToken.cs" />
+    <Compile Include="Models\MediaFile.cs" />
+    <Compile Include="Models\PlayerCacheModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

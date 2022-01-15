@@ -41,18 +41,21 @@
             this.panelDirectory = new System.Windows.Forms.Panel();
             this.panelDirectoriesList = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.bunifuTextBoxSearch = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.imageListFolders = new System.Windows.Forms.ImageList(this.components);
+            this.panelDirectoryLoading = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelNoDirectory.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelDirectory.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panelDirectoryLoading.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNoDirectory
@@ -108,6 +111,7 @@
             // panelDirectory
             // 
             this.panelDirectory.Controls.Add(this.panelDirectoriesList);
+            this.panelDirectory.Controls.Add(this.panelDirectoryLoading);
             this.panelDirectory.Controls.Add(this.panel1);
             this.panelDirectory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDirectory.Location = new System.Drawing.Point(0, 0);
@@ -127,7 +131,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(66)))), ((int)(((byte)(146)))));
-            this.panel1.Controls.Add(this.bunifuTextBox1);
+            this.panel1.Controls.Add(this.bunifuTextBoxSearch);
             this.panel1.Controls.Add(this.bunifuDropdown1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -136,80 +140,82 @@
             this.panel1.Size = new System.Drawing.Size(800, 44);
             this.panel1.TabIndex = 2;
             // 
-            // bunifuTextBox1
+            // bunifuTextBoxSearch
             // 
-            this.bunifuTextBox1.AcceptsReturn = false;
-            this.bunifuTextBox1.AcceptsTab = false;
-            this.bunifuTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.bunifuTextBoxSearch.AcceptsReturn = false;
+            this.bunifuTextBoxSearch.AcceptsTab = false;
+            this.bunifuTextBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTextBox1.AnimationSpeed = 200;
-            this.bunifuTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox1.BackgroundImage")));
-            this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 1;
-            this.bunifuTextBox1.BorderThickness = 1;
-            this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.bunifuTextBox1.DefaultText = "";
-            this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
-            this.bunifuTextBox1.HideSelection = true;
-            this.bunifuTextBox1.IconLeft = null;
-            this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = null;
-            this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox1.Lines = new string[0];
-            this.bunifuTextBox1.Location = new System.Drawing.Point(612, 5);
-            this.bunifuTextBox1.MaxLength = 32767;
-            this.bunifuTextBox1.MinimumSize = new System.Drawing.Size(100, 35);
-            this.bunifuTextBox1.Modified = false;
-            this.bunifuTextBox1.Multiline = false;
-            this.bunifuTextBox1.Name = "bunifuTextBox1";
+            this.bunifuTextBoxSearch.AnimationSpeed = 200;
+            this.bunifuTextBoxSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bunifuTextBoxSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bunifuTextBoxSearch.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBoxSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBoxSearch.BackgroundImage")));
+            this.bunifuTextBoxSearch.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.bunifuTextBoxSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuTextBoxSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bunifuTextBoxSearch.BorderColorIdle = System.Drawing.Color.Silver;
+            this.bunifuTextBoxSearch.BorderRadius = 1;
+            this.bunifuTextBoxSearch.BorderThickness = 1;
+            this.bunifuTextBoxSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.bunifuTextBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxSearch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.bunifuTextBoxSearch.DefaultText = "";
+            this.bunifuTextBoxSearch.FillColor = System.Drawing.Color.White;
+            this.bunifuTextBoxSearch.HideSelection = true;
+            this.bunifuTextBoxSearch.IconLeft = null;
+            this.bunifuTextBoxSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxSearch.IconPadding = 10;
+            this.bunifuTextBoxSearch.IconRight = null;
+            this.bunifuTextBoxSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuTextBoxSearch.Lines = new string[0];
+            this.bunifuTextBoxSearch.Location = new System.Drawing.Point(612, 5);
+            this.bunifuTextBoxSearch.MaxLength = 32767;
+            this.bunifuTextBoxSearch.MinimumSize = new System.Drawing.Size(100, 35);
+            this.bunifuTextBoxSearch.Modified = false;
+            this.bunifuTextBoxSearch.Multiline = false;
+            this.bunifuTextBoxSearch.Name = "bunifuTextBoxSearch";
             stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnActiveState = stateProperties1;
+            this.bunifuTextBoxSearch.OnActiveState = stateProperties1;
             stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.OnDisabledState = stateProperties2;
+            this.bunifuTextBoxSearch.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnHoverState = stateProperties3;
+            this.bunifuTextBoxSearch.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox1.OnIdleState = stateProperties4;
-            this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.PlaceholderText = "Search Anime";
-            this.bunifuTextBox1.ReadOnly = false;
-            this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox1.SelectedText = "";
-            this.bunifuTextBox1.SelectionLength = 0;
-            this.bunifuTextBox1.SelectionStart = 0;
-            this.bunifuTextBox1.ShortcutsEnabled = true;
-            this.bunifuTextBox1.Size = new System.Drawing.Size(185, 35);
-            this.bunifuTextBox1.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox1.TabIndex = 3;
-            this.bunifuTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox1.TextMarginBottom = 0;
-            this.bunifuTextBox1.TextMarginLeft = 5;
-            this.bunifuTextBox1.TextMarginTop = 0;
-            this.bunifuTextBox1.TextPlaceholder = "Search Anime";
-            this.bunifuTextBox1.UseSystemPasswordChar = false;
-            this.bunifuTextBox1.WordWrap = true;
+            this.bunifuTextBoxSearch.OnIdleState = stateProperties4;
+            this.bunifuTextBoxSearch.PasswordChar = '\0';
+            this.bunifuTextBoxSearch.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.bunifuTextBoxSearch.PlaceholderText = "Search Anime";
+            this.bunifuTextBoxSearch.ReadOnly = false;
+            this.bunifuTextBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.bunifuTextBoxSearch.SelectedText = "";
+            this.bunifuTextBoxSearch.SelectionLength = 0;
+            this.bunifuTextBoxSearch.SelectionStart = 0;
+            this.bunifuTextBoxSearch.ShortcutsEnabled = true;
+            this.bunifuTextBoxSearch.Size = new System.Drawing.Size(185, 35);
+            this.bunifuTextBoxSearch.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.bunifuTextBoxSearch.TabIndex = 3;
+            this.bunifuTextBoxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuTextBoxSearch.TextMarginBottom = 0;
+            this.bunifuTextBoxSearch.TextMarginLeft = 5;
+            this.bunifuTextBoxSearch.TextMarginTop = 0;
+            this.bunifuTextBoxSearch.TextPlaceholder = "Search Anime";
+            this.bunifuTextBoxSearch.UseSystemPasswordChar = false;
+            this.bunifuTextBoxSearch.WordWrap = true;
+            this.bunifuTextBoxSearch.TextChange += new System.EventHandler(this.bunifuTextBox1_TextChange);
+            this.bunifuTextBoxSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bunifuTextBoxSearch_KeyDown);
             // 
             // bunifuDropdown1
             // 
@@ -278,6 +284,28 @@
             this.imageListFolders.ImageSize = new System.Drawing.Size(150, 150);
             this.imageListFolders.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // panelDirectoryLoading
+            // 
+            this.panelDirectoryLoading.Controls.Add(this.label3);
+            this.panelDirectoryLoading.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDirectoryLoading.Location = new System.Drawing.Point(0, 44);
+            this.panelDirectoryLoading.Name = "panelDirectoryLoading";
+            this.panelDirectoryLoading.Size = new System.Drawing.Size(800, 406);
+            this.panelDirectoryLoading.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.label3.Size = new System.Drawing.Size(800, 33);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Loading Directory. Please Wait.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // DirectoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +326,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panelDirectoryLoading.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,8 +343,10 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBoxSearch;
         private System.Windows.Forms.ImageList imageListFolders;
         private System.Windows.Forms.FlowLayoutPanel panelDirectoriesList;
+        private System.Windows.Forms.Panel panelDirectoryLoading;
+        private System.Windows.Forms.Label label3;
     }
 }

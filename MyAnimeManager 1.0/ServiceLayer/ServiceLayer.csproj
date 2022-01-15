@@ -55,7 +55,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DirectoryServices\DirectoryServices.cs" />
     <Compile Include="Services\DirectoryServices\IDirectoryServices.cs" />
+    <Compile Include="Services\IPlayerCacheServices.cs" />
     <Compile Include="Services\IRestfulService.cs" />
+    <Compile Include="Services\PlayerCacheServices.cs" />
     <Compile Include="Services\RestfulService.cs" />
   </ItemGroup>
   <ItemGroup>

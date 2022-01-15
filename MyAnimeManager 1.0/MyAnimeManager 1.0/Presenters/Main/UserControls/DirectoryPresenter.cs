@@ -12,6 +12,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,16 +22,20 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
     {
         //Attributes
         public event EventHandler SelectDirectoryClickEventRaised;
+        public event EventHandler SearchBoxTextChangedEventRaised;
         public event EventHandler DirectoryLoadedEventRaised;
 
         IDirectoryView _directoryView;
         IProfileView _profileView;
+        IMainView _mainView;
         IDirectoryServices _directoryServices;
         IRestfulService _restfulService;
         IFolderItem _folderItem;
 
         private List<FolderItem> listFolderItems = new List<FolderItem>();
         private FolderItem currentlySelected;
+
+        private Thread searchThread;
 
         //-------------------------------------------------  (START) GET STOCK ICON -----------------------------------------------------------------------//
         [StructLayout(LayoutKind.Sequential)]
@@ -98,12 +103,14 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
 
         public DirectoryPresenter(IDirectoryView directoryView,
                                   IProfileView profileView,
+                                  IMainView mainView,
                                   IDirectoryServices directoryServices,
                                   IRestfulService restfulService,
                                   IFolderItem folderItem)
         {
             _directoryView = directoryView;
             _profileView = profileView;
+            _mainView = mainView;
             _directoryServices = directoryServices;
             _restfulService = restfulService;
             _folderItem = folderItem;
@@ -138,22 +145,22 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 MessageBox.Show("Anime Not Found. The name of the folder should be exactly the same as shown in MAL");
         }
 
+        public FolderItem GetCurrentlySelected()
+        {
+            return currentlySelected;
+        }
+
         //Private Methods
         private void SubscribeToEventsSetup()
         {
             _directoryView.DirectoryLoadedEventRaised += new EventHandler(OnDirectoryLoadedEventRaised);
+            _directoryView.SearchBoxTextChangedEventRaised += new EventHandler(OnSearchBoxTextChangedEventRaised);
             _directoryView.SelectDirectoryClickEventRaised += new EventHandler(OnAddDirectoryClickEventRaised);
         }
 
+        
         private string GetIconPath(String folderPath)
         {
-            //SHFILEINFO shinfo = new SHFILEINFO();
-            //Win32.SHGetFileInfo(folderPath, 0, ref shinfo, (uint)Marshal.SizeOf(shinfo), (int)0x1000);
-            //Console.WriteLine("Icon Path: "+shinfo.szDisplayName);
-            //if(shinfo.szDisplayName.Equals(@"C:\WINDOWS\system32\imageres.dll"))
-            //    return null;
-            //else
-            //    return shinfo.szDisplayName;
             string[] filePaths = Directory.GetFiles(folderPath, "*.ico", SearchOption.AllDirectories);
             if (filePaths.Count() > 0)
                 return filePaths[0];
@@ -161,31 +168,86 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 return null;
         }
 
-
-        private void LoadDirectory(DirectoryModel model)
+        private void ThreadLoadDirectory(DirectoryModel model, String filter = "")
         {
-            _directoryView.GetListViewDirectory().Controls.Clear();
+            _directoryView.GetListViewDirectory().Invoke(new Action(delegate
+            {
+                
+                _directoryView.GetListViewDirectory().Controls.Clear();
+                
+            }));
+            _directoryView.GetDirectoryForm().Invoke(new Action(delegate
+            {
+                _directoryView.ShowLoadingPanel();
+            }));
             listFolderItems.Clear();
             //_directoryView.GetDirectoryListPanel().Controls.Clear();
             int loopCtr = 0;
             foreach (string item in Directory.GetDirectories(model.DirectoryPath).OrderBy(fi => fi))
             {
                 DirectoryInfo directoryInfo = new DirectoryInfo(item);
-                ListViewItem viewItem = new ListViewItem();
-                string iconPath = GetIconPath(directoryInfo.FullName);
-                FolderItem folderItem = new FolderItem(CallbackOnFolderLeftClick, loopCtr);
-                if (!String.IsNullOrEmpty(iconPath))
+                if (directoryInfo.Name.ToLower().Contains(filter.ToLower()))
                 {
-                    folderItem = (FolderItem)folderItem.SetFolderIcon(iconPath, directoryInfo.Name);
-                    _directoryView.GetListViewDirectory().Controls.Add(folderItem);
+                    ListViewItem viewItem = new ListViewItem();
+                    string iconPath = GetIconPath(directoryInfo.FullName);
+                    FolderItem folderItem = new FolderItem(
+                        CallbackOnFolderLeftClick,
+                        CallbackOnFolderRightClick,
+                        loopCtr
+                        );
+                    folderItem.Name = directoryInfo.Name;
+                    if (!String.IsNullOrEmpty(iconPath))
+                        folderItem = (FolderItem)folderItem.SetFolderIcon(iconPath, directoryInfo.Name);
+                    else
+                        folderItem = (FolderItem)folderItem.SetFolderIcon(directoryInfo.Name);
+
+                    _directoryView.GetListViewDirectory().Invoke(new Action(delegate
+                    {
+                        _directoryView.GetListViewDirectory().Controls.Add(folderItem);
+                    }));
+
+                    listFolderItems.Add((FolderItem)folderItem);
+                    loopCtr++;
                 }
-                else
+            }
+            Console.WriteLine("counter: " + loopCtr);
+            _directoryView.GetDirectoryForm().Invoke(new Action(delegate
+            {
+                _directoryView.ShowDirectoryListPanel();
+            }));
+        }
+
+        private void LoadDirectory(DirectoryModel model, String filter = "")
+        {
+            _directoryView.GetListViewDirectory().Controls.Clear();
+            listFolderItems.Clear();
+            int loopCtr = 0;
+            foreach (string item in Directory.GetDirectories(model.DirectoryPath).OrderBy(fi => fi))
+            {
+                DirectoryInfo directoryInfo = new DirectoryInfo(item);
+                if (directoryInfo.Name.ToLower().Contains(filter.ToLower()))
                 {
-                    folderItem = (FolderItem)folderItem.SetFolderIcon(directoryInfo.Name);
-                    _directoryView.GetListViewDirectory().Controls.Add(folderItem);
+                    ListViewItem viewItem = new ListViewItem();
+                    string iconPath = GetIconPath(directoryInfo.FullName);
+                    FolderItem folderItem = new FolderItem(
+                        CallbackOnFolderLeftClick, 
+                        CallbackOnFolderRightClick, 
+                        loopCtr
+                        );
+                    folderItem.Name = directoryInfo.Name;
+                    if (!String.IsNullOrEmpty(iconPath))
+                    {
+                        folderItem = (FolderItem)folderItem.SetFolderIcon(iconPath, directoryInfo.Name);
+                        _directoryView.GetListViewDirectory().Controls.Add(folderItem);
+                    }
+                    else
+                    {
+                        folderItem = (FolderItem)folderItem.SetFolderIcon(directoryInfo.Name);
+                        _directoryView.GetListViewDirectory().Controls.Add(folderItem);
+                    }
+                    listFolderItems.Add((FolderItem)folderItem);
+                    loopCtr++;
                 }
-                listFolderItems.Add((FolderItem)folderItem);
-                loopCtr++;
             }
             Console.WriteLine("counter: "+ loopCtr);
 
@@ -201,6 +263,22 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
             else
                 _directoryView.ShowNoDirectoryPanel();
         }
+        private void OnSearchBoxTextChangedEventRaised(object sender, EventArgs e)
+        {
+            Console.WriteLine("Text Search: " + _directoryView.GetSearchText());
+            DirectoryModel model = _directoryServices.Get();
+            if(searchThread != null)
+            {
+                searchThread.Abort();
+                _directoryView.GetListViewDirectory().Controls.Clear();
+                listFolderItems.Clear();
+            }
+            if (model != null)
+            {
+                searchThread = new Thread(()=> ThreadLoadDirectory(model, _directoryView.GetSearchText()));
+                searchThread.Start();
+            }
+        }
         private void OnAddDirectoryClickEventRaised(object sender, EventArgs e)
         {
             using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog() { Description = "Select your Anime Directory." })
@@ -212,6 +290,7 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
                 }
             }
         }
+        //Callbacks
         private async void CallbackOnFolderLeftClick(String folderName, int index)
         {
             if (currentlySelected != null)
@@ -219,6 +298,25 @@ namespace MyAnimeManager_1._0.Presenters.Main.Forms
             currentlySelected = listFolderItems[index];
             listFolderItems[index].SetSelected();
             dynamic animeDetails = await _restfulService.GetAnimeDetails(folderName);
+            if (animeDetails != null)
+            {
+                Console.WriteLine(animeDetails);
+                _profileView.SetSelectedAnimeID((int)animeDetails["id"]);
+                _profileView.SetAnimeDetails(animeDetails);
+                _profileView.ShowAnimeDetailsPanel();
+            }
+            else
+                MessageBox.Show("Anime Not Found. The name of the folder should be exactly the same as shown in MAL");
+        }
+        private async void CallbackOnFolderRightClick(String folderName, int index)
+        {
+            
+            if (currentlySelected != null)
+                currentlySelected.Deselect();
+            currentlySelected = listFolderItems[index];
+            listFolderItems[index].SetSelected();
+            dynamic animeDetails = await _restfulService.GetAnimeDetails(folderName);
+            _mainView.ShowRightClickOnFolder();
             if (animeDetails != null)
             {
                 Console.WriteLine(animeDetails);

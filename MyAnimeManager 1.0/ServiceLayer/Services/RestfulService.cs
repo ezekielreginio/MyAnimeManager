@@ -110,6 +110,7 @@ namespace ServiceLayer.Services
                 String animeQuery = await response.Content.ReadAsStringAsync();
                 dynamic jsonAnimeResult = JsonConvert.DeserializeObject(animeQuery);
                 int animeID = -1;
+                bool flagfound = false;
                 for (int i = 0; i < ((JArray)jsonAnimeResult["data"]).Count; i++)
                 {
                     dynamic anime = jsonAnimeResult["data"][i];
@@ -117,11 +118,15 @@ namespace ServiceLayer.Services
                     if (title.ToLower().Equals(StringExtensions.RemoveSpecialCharacters((String)anime["node"]["title"]).ToLower()))
                     {
                         animeID = jsonAnimeResult["data"][i]["node"]["id"];
+                        flagfound = true;
                         break;
                     }
 
                 }
-
+                if (!flagfound)
+                {
+                    animeID = jsonAnimeResult["data"][0]["node"]["id"];
+                }
                 return await GetAnimeDetailsByID(animeID);
 
             }

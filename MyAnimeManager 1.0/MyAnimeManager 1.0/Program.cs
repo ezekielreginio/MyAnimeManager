@@ -41,6 +41,7 @@ namespace MyAnimeManager_1._0
                 .RegisterType<IDirectoryView, DirectoryView>(new ContainerControlledLifetimeManager())
                 .RegisterType<ILoginView, LoginView>(new ContainerControlledLifetimeManager())
                 .RegisterType<IProfileView, ProfileView>(new ContainerControlledLifetimeManager())
+                .RegisterType<IVideoPlayerView, VideoPlayerView>(new ContainerControlledLifetimeManager())
                 .RegisterType<IFolderItem, FolderItem>(new ContainerControlledLifetimeManager())
                 //Presenters
                 .RegisterType<IMainPresenter, MainPresenter>(new ContainerControlledLifetimeManager())
@@ -48,9 +49,11 @@ namespace MyAnimeManager_1._0
                 //Repositories
                 .RegisterType<IRestfulRepository, RestfulRepository>(new InjectionConstructor(_connectionString))
                 .RegisterType<IDirectoryRepository, DirectoryRepository>(new InjectionConstructor(_connectionString))
+                .RegisterType<IPlayerCacheRepository, PlayerCacheRepository>(new InjectionConstructor(_connectionString))
                 //Services
                 .RegisterType<IRestfulService, RestfulService>(new ContainerControlledLifetimeManager())
                 .RegisterType<IDirectoryServices, DirectoryServices>(new ContainerControlledLifetimeManager())
+                .RegisterType<IPlayerCacheServices, PlayerCacheServices>(new ContainerControlledLifetimeManager())
                 //Annotation Checker
                 .RegisterType<IModelDataAnnotationCheck, ModelDataAnnotationCheck>(new ContainerControlledLifetimeManager());
 
