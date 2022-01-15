@@ -17,7 +17,7 @@ namespace ServiceLayer.Tests
         public DirectoryServicesFixture()
         {
             DirectoryModel = new DirectoryModel();
-            DirectoryServices = new DirectoryServices(null, new ModelDataAnnotationCheck());
+            //DirectoryServices = new DirectoryServices(null, new ModelDataAnnotationCheck());
 
         }
 

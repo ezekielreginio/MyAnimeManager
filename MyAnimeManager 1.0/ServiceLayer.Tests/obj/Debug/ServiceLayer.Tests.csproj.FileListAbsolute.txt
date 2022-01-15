@@ -26,3 +26,8 @@ C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Test
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\System.Data.SQLite.xml
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\CommonComponents.dll
 C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\InfrastructureLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\Interop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\InfrastructureLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\ServiceLayer.Tests\bin\Debug\InfrastructureLayer.dll.config

@@ -1,0 +1,12 @@
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\CommonComponents.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\AxInterop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\Newtonsoft.Json.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\System.Data.SQLite.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\Interop.WMPLib.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\Newtonsoft.Json.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\bin\Release\System.Data.SQLite.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Release\CommonComponents.csproj.CoreCompileInputs.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Release\CommonComponents.csproj.CopyComplete
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Release\CommonComponents.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\CommonComponents\obj\Release\CommonComponents.pdb

@@ -1,0 +1,8 @@
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Release\DomainLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Release\DomainLayer.pdb
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Release\System.Data.SQLite.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\bin\Release\System.Data.SQLite.xml
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Release\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Release\DomainLayer.csproj.CopyComplete
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Release\DomainLayer.dll
+C:\Users\Zeke\VSCodeProjects\MyAnimeManager\MyAnimeManager 1.0\DomainLayer\obj\Release\DomainLayer.pdb
